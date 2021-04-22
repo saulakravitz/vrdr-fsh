@@ -1,0 +1,34 @@
+{
+  "resourceType": "Observation",
+  "id": "4d0ce010-16f1-44f4-bbf8-3a2030e9de99",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"
+    ],
+    "versionId": "2",
+    "lastUpdated": "2020-07-21T22:40:43.185+00:00",
+    "source": "#cIJIQkq7Q2smLbo1"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "69443-0",
+        "system": "http://loinc.org",
+        "display": "Did tobacco use contribute to death"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "373066001",
+        "system": "http://snomed.info/sct",
+        "display": "Yes"
+      }
+    ]
+  }
+}

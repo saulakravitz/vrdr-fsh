@@ -1,0 +1,212 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VRDR-Death-Certificate",
+  "meta": {
+    "versionId": "13",
+    "lastUpdated": "2020-08-07T15:46:37.056+00:00",
+    "source": "#xWgWALJHC1oSZGq3"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Documents"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
+  "version": "1.0.0",
+  "name": "DeathCertificate",
+  "title": "VRDR Death Certificate",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-05-09",
+  "publisher": "Health Level Seven International",
+  "contact": [
+    {
+      "name": "HL7 International - Public Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/pher"
+        }
+      ]
+    },
+    {
+      "name": "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
+    },
+    {
+      "name": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
+    }
+  ],
+  "description": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ],
+      "text": "US Realm"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "status",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/composition-status"
+        }
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "type",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "64297-5",
+              "system": "http://loinc.org",
+              "display": "Death certificate"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "date"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "short": "attester",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.attester.mode",
+        "path": "Composition.attester.mode",
+        "short": "mode",
+        "definition": "This attester SHALL contain exactly one [1..1] mode=\"\"legal\"\"(CONF:4393-367).",
+        "fixedCode": "legal"
+      },
+      {
+        "id": "Composition.attester.time",
+        "path": "Composition.attester.time",
+        "short": "time",
+        "definition": "This attester SHALL contain exactly one [1..1] time (CONF:4393-369).",
+        "min": 1
+      },
+      {
+        "id": "Composition.attester.party",
+        "path": "Composition.attester.party",
+        "short": "party",
+        "definition": "This attester SHALL contain exactly one [1..1] party=\"VRDR Certifier\"(CONF:4393-368).",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "short": "event",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event.code",
+        "path": "Composition.event.code",
+        "short": "code",
+        "definition": "This event SHALL contain exactly one [1..1] code=\"\"103693007\"\"(CONF:4393-372).",
+        "min": 1,
+        "max": "1",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "103693007",
+              "system": "http://snomed.info/sct",
+              "display": "Diagnostic procedure (procedure)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.event.detail",
+        "path": "Composition.event.detail",
+        "short": "detail",
+        "definition": "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

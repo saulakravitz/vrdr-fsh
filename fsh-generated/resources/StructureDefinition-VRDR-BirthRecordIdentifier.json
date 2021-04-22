@@ -1,0 +1,219 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VRDR-BirthRecordIdentifier",
+  "meta": {
+    "versionId": "22",
+    "lastUpdated": "2020-07-21T00:29:30.908+00:00",
+    "source": "#4JaWwyKmZx3ygQud"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier",
+  "version": "1.0.0",
+  "name": "VRDR_BirthRecordIdentifier",
+  "title": "VRDR Birth Record Identifier",
+  "status": "active",
+  "date": "2021-04-07T19:28:04+00:00",
+  "publisher": "Health Level Seven International",
+  "contact": [
+    {
+      "name": "HL7 International - Public Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/pher"
+        }
+      ]
+    },
+    {
+      "name": "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
+    },
+    {
+      "name": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ],
+      "text": "US Realm"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "fixedCode": "final"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "BR",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "display": "Birth registry number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:birthState",
+        "path": "Observation.component",
+        "sliceName": "birthState",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:birthState.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "21842-0",
+              "system": "http://loinc.org",
+              "display": "Birthplace"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:birthState.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:iso:std:iso:3166:-2"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:birthYear",
+        "path": "Observation.component",
+        "sliceName": "birthYear",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:birthYear.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "80904-6",
+              "system": "http://loinc.org",
+              "display": "Birth year"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:birthYear.value[x]",
+        "path": "Observation.component.value[x]",
+        "comment": "The birth year is expressed using the YYYY portion of datetime and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource.",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

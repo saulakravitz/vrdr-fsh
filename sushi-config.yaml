@@ -1,0 +1,12 @@
+canonical: http://hl7.org/fhir/us/vrdr
+fhirVersion: 4.0.1
+FSHOnly: true
+applyExtensionMetadataToRoot: false
+id: hl7.fhir.us.vrdr
+name: VRDR
+status: draft
+version: 1.0.0
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.odh: 1.0.0
+  us.cdc.phinvads: 0.7.0

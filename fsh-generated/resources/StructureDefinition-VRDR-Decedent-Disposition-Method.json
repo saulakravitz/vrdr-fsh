@@ -1,0 +1,209 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VRDR-Decedent-Disposition-Method",
+  "meta": {
+    "versionId": "32",
+    "lastUpdated": "2020-08-17T14:36:23.009+00:00",
+    "source": "#bReEsnSuWhXVxAUW"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method",
+  "version": "1.0.0",
+  "name": "VRDR_DecedentDispositionMethod",
+  "title": "Decedent Disposition Method",
+  "status": "draft",
+  "date": "2021-04-07T19:28:04+00:00",
+  "publisher": "Health Level Seven International",
+  "contact": [
+    {
+      "name": "HL7 International - Public Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/pher"
+        }
+      ]
+    },
+    {
+      "name": "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
+    },
+    {
+      "name": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ],
+      "text": "US Realm"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "Observation.extension"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:dispositionLocation",
+        "path": "Observation.extension",
+        "sliceName": "dispositionLocation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.extension:dispositionLocation.extension",
+        "path": "Observation.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Observation.extension:dispositionLocation.url",
+        "path": "Observation.extension.url",
+        "fixedUri": "dispositionLocation"
+      },
+      {
+        "id": "Observation.extension:dispositionLocation.value[x]",
+        "path": "Observation.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "short": "status",
+        "definition": "SHALL contain exactly one [1..1] status=\"final\" Final (CONF:4393-162).",
+        "patternCode": "final"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "code",
+        "definition": "SHALL contain exactly one [1..1] code=\"80905-3\"  Body disposition method (CodeSystem: LOINC urn:oid:2.16.840.1.113883.6.1) (CONF:4393-163).",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "80905-3",
+              "system": "http://loinc.org",
+              "display": "Body disposition method"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "short": "subject",
+        "definition": "SHALL contain exactly one [1..1] subject (CONF:4393-154).",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "short": "performer",
+        "definition": "SHALL contain exactly one [1..1] performer (CONF:4393-155).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7379",
+          "description": "PHVS_MethodsOfDisposition_NCHS"
+        }
+      }
+    ]
+  }
+}

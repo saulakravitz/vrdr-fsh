@@ -1,0 +1,314 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VRDR-InjuryIncident",
+  "meta": {
+    "versionId": "23",
+    "lastUpdated": "2020-08-17T16:17:34.702+00:00",
+    "source": "#MuquB0uvBh8BkWDP"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
+  "version": "1.0.0",
+  "name": "InjuryIncident",
+  "title": "VRDR Injury Incident",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-05-10",
+  "publisher": "Health Level Seven International",
+  "contact": [
+    {
+      "name": "HL7 International - Public Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/pher"
+        }
+      ]
+    },
+    {
+      "name": "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
+    },
+    {
+      "name": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ],
+      "text": "US Realm"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "Observation.extension.url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:injuryLocation",
+        "path": "Observation.extension",
+        "sliceName": "injuryLocation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.extension:injuryLocation.extension",
+        "path": "Observation.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Observation.extension:injuryLocation.url",
+        "path": "Observation.extension.url",
+        "fixedUri": "injuryLocation"
+      },
+      {
+        "id": "Observation.extension:injuryLocation.value[x]",
+        "path": "Observation.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "fixedCode": "final"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "11374-6",
+              "system": "http://loinc.org",
+              "display": "Injury incident description Narrative"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3,
+        "max": "3"
+      },
+      {
+        "id": "Observation.component:placeOfInjury",
+        "path": "Observation.component",
+        "sliceName": "placeOfInjury",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:placeOfInjury.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "69450-5",
+              "system": "http://loinc.org",
+              "display": "Place of injury Facility"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:placeOfInjury.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7374",
+          "description": "PHVS_PlaceOfInjury_NCHS"
+        }
+      },
+      {
+        "id": "Observation.component:workInjuryIndicator",
+        "path": "Observation.component",
+        "sliceName": "workInjuryIndicator",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:workInjuryIndicator.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "69444-8",
+              "system": "http://loinc.org",
+              "display": "Did death result from injury at work"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:workInjuryIndicator.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7486",
+          "description": "PHVS_YesNoNotApplicable_NCHS"
+        }
+      },
+      {
+        "id": "Observation.component:transportationEventIndicator",
+        "path": "Observation.component",
+        "sliceName": "transportationEventIndicator",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:transportationEventIndicator.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "69448-9",
+              "system": "http://loinc.org",
+              "display": "Injury leading to death associated with transportation event"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:transportationEventIndicator.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.888",
+          "description": "PHVS_YesNoUnknown_CDC"
+        }
+      }
+    ]
+  }
+}
