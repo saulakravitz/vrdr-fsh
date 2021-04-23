@@ -75,7 +75,7 @@ Usage: #example
 * effectiveDateTime = "2018-02-19T16:48:06-05:00"
 * valueDateTime = "2018-02-19T16:48:06-05:00"
 * component[0].code = $loinc#69444-8 "Did death result from injury at work"
-* component[0].value[x] = $v2-0136#N "No"
+* component[0].valueCodeableConcept = $v2-0136#N "No"
 * component[1].code = $loinc#69448-9 "Injury leading to death associated with transportation event"
 * component[1].valueCodeableConcept = $v2-0136#N "No"
 * component[2].code = $loinc#69450-5 "Place of injury Facility"
