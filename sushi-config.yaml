@@ -1,12 +1,49 @@
+# canonical, fhirVersion, id, name, status, copyrightYear, releaseLabel.
 canonical: http://hl7.org/fhir/us/vrdr
-fhirVersion: 4.0.1
-FSHOnly: true
-applyExtensionMetadataToRoot: false
+releaseLabel: vrdr
 id: hl7.fhir.us.vrdr
+fhirVersion: 4.0.1
+FSHOnly: false
+applyExtensionMetadataToRoot: false
 name: VRDR
 status: draft
 version: 1.0.0
 dependencies:
   hl7.fhir.us.core: 3.1.0
   hl7.fhir.us.odh: 1.0.0
-  us.cdc.phinvads: 0.7.0
+  us.cdc.phinvads: 
+    uri: http://fhir.org/packages/us.cdc.phinvads
+    version: 0.7.0
+jurisdiction: urn:iso:std:iso:3166#US
+license: CC0-1.0
+parameters:
+  show-inherited-invariants: false
+  jira-code: vrdr
+copyrightYear: 2021+
+# ╭───────────────────ImplementationGuide-hl7.fhir.us.davinci-pdex-plan-net.json───────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home          : index.html
+  Table of Contents: toc.html
+  FHIR Artifacts:
+    Profiles            : profiles.html
+    Extensions          : artifacts.html#3
+    Search Parameters   : artifacts.html#2
+    Terminology         : artifacts.html#5
+    Capability Statement: CapabilityStatement-plan-net.html
+  Examples      : artifacts.html#7
+  Downloads     : downloads.html
+  History       : http://www.hl7.org/fhir/us/vrdr/history.cfml
