@@ -24,7 +24,7 @@ Title: "Location Jurisdiction Id"
 * ^context[0].type = #extension
 * ^context[0].expression = "Location"
 * url 1..1
-* url = "jurisdictionID" (exactly)
+//* url = "jurisdictionID" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from $ViewValueSet.action_15 (required)

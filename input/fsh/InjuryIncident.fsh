@@ -20,9 +20,8 @@ Title: "VRDR Injury Incident"
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "Observation.extension.url"
 * extension ^slicing.rules = #open
-* extension contains injuryLocation 0..1
+* extension contains ObservationLocation named injuryLocation 0..1
 * extension[injuryLocation].url 1..1
-* extension[injuryLocation].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location" (exactly)
 * extension[injuryLocation].value[x] only Reference(InjuryLocation)
 * status 1..1
 * status = #final (exactly)
@@ -76,7 +75,7 @@ Usage: #example
 * effectiveDateTime = "2018-02-19T16:48:06-05:00"
 * valueDateTime = "2018-02-19T16:48:06-05:00"
 * component[0].code = $loinc#69444-8 "Did death result from injury at work"
-* component[0].valueCodeableConcept = $v2-0136#N "No"
+* component[0].value[x] = $v2-0136#N "No"
 * component[1].code = $loinc#69448-9 "Injury leading to death associated with transportation event"
 * component[1].valueCodeableConcept = $v2-0136#N "No"
 * component[2].code = $loinc#69450-5 "Place of injury Facility"

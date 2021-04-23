@@ -18,9 +18,8 @@ Title: "VRDR_DeathDate"
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "Observation.extension.url"
 * extension ^slicing.rules = #open
-* extension contains deathLocation 0..1
+* extension contains ObservationLocation named deathLocation 0..1
 * extension[deathLocation].url 1..1
-* extension[deathLocation].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location" (exactly)
 * extension[deathLocation].value[x] 1..1
 * extension[deathLocation].value[x] only Reference(DeathLocation)
 * status 1..1
