@@ -33,7 +33,7 @@ jobs:
      - name: Download genonce
         run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh" -o _genonce.sh; chmod +x ./_genonce.sh 
 UpdatePublisher
-      -name: Run UpdatePublisher.sh
+      -name: Run gork UpdatePublisher.sh
         run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
       - name: Run genonce.sh
         run: ./_genonce.sh
