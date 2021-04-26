@@ -22,14 +22,14 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: "2.6" 
+      - name: Install dependencies
+        run: npm install -g fsh-sushi --nosave
+      - name: Run fsh-sushi
+        run: sushi . ; ls -lR fsh-generated
       - name: Install jekyll
         run: gem install jekyll --no-document
       - name: Get Publisher Jar using curl
         run: mkdir input-cache; ls -l ;curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
-      - name: Install dependencies
-        run: npm install -g fsh-sushi --nosave
-      - name: Run fsh-sushi
-        run: node_modules/fsh-sushi/dist/app.js . ; ls -lR fsh-generated
       - name: Run genonce.sh
         run: java -jar ./input-cache/publisher.jar publisher -no-sushi -ig .
       - name: Push changes
