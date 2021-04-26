@@ -15,14 +15,14 @@ jobs:
           java-package: jre
           architecture: x64
       - name: Set up node
-        uses: actions/setup-node@v1
+          uses: actions/setup-node@v1
         with:
           node-version: "12.12"
       - name: Set up ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: "2.6" 
-     - name: Install jekyll
+      - name: Install jekyll
         run: gem install jekyll --no-document
       - name: Get Publisher Jar using curl
         run: mkdir input-cache; ls -l ;curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
