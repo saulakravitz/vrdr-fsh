@@ -28,7 +28,7 @@ jobs:
 #        run: npm install fsh-sushi --no-save
         run: npm install fsh-sushi --nosave
       - name: Run fsh-sushi
-        run: sushi . ; ls -lR fsh-generated
+        run: /usr/local/bin/sushi . ; ls -lR fsh-generated
       - name: Download using updatePublisher.sh 
         run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
       - name: Replace with v1.1.68 updatePublisher.sh
