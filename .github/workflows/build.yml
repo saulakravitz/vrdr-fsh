@@ -33,7 +33,7 @@ jobs:
       - name: Download updatePublisher
         run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh" -o _updatePublisher.sh; chmod +x ./_updatePublisher.sh
       - name: Run gork UpdatePublisher.sh
-        run: mkdir input-cache; ls -l ;ping tx.fhir.org -c 1 ;./_updatePublisher.sh --force
+        run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
       - name: Run genonce.sh
         run: ./_genonce.sh
       - name: Push changes
