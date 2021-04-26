@@ -27,15 +27,15 @@ jobs:
       - name: Install dependencies
         run: npm install fsh-sushi --nosave
       - name: Run fsh-sushi
-        run: node node_modules/fsh-sushi/dist/app.js . ; ls -lR fsh-generated
-      - name: Download using updatePublisher.sh 
+        run: node_modules/fsh-sushi/dist/app.js . ; ls -lR fsh-generated
+      - name: Download updatePublisher
+        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh" -o _updatePublisher.sh; chmod +x ./_updatePublisher.sh 
+      - name: Download genonce.sh
+        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh" -o _genonce.sh; chmod +x ./_genonce.sh 
+      -name: UpdatePublisher
         run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
-      - name: Replace with v1.1.68 updatePublisher.sh
-        run: cd ./input-cache; rm publisher.jar; curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/1.1.68/publisher.jar -o "publisher.jar" --create-dirs  
       - name: Run genonce.sh
         run: ./_genonce.sh
-#      - name: Run ig-publisher
- #       run: cd fsh/build && ./_genonce.sh
       - name: Push changes
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
