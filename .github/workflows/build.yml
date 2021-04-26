@@ -30,9 +30,10 @@ jobs:
         run: node_modules/fsh-sushi/dist/app.js . ; ls -lR fsh-generated
       - name: Download updatePublisher
         run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh" -o _updatePublisher.sh; chmod +x ./_updatePublisher.sh 
-      - name: Download  genonce.sh
+     - name: Download genonce
         run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh" -o _genonce.sh; chmod +x ./_genonce.sh 
-      -name: UpdatePublisher
+UpdatePublisher
+      -name: Run UpdatePublisher.sh
         run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
       - name: Run genonce.sh
         run: ./_genonce.sh
