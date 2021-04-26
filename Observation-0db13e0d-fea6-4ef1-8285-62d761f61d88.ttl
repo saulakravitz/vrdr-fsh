@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "0db13e0d-fea6-4ef1-8285-62d761f61d88"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-21T00:53:25.201+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#brM1jqtwMAqwn7Dl" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 85699-7}\">Autopsy was performed</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 Y}\">Yes</span></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://loinc.org 69436-4}\">Autopsy results available</span></td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 Y}\">Yes</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:85699-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "85699-7" ];
+       fhir:Coding.display [ fhir:value "Autopsy was performed" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0136" ];
+       fhir:Coding.code [ fhir:value "Y" ];
+       fhir:Coding.display [ fhir:value "Yes" ]
+     ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69436-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69436-4" ];
+         fhir:Coding.display [ fhir:value "Autopsy results available" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0136" ];
+         fhir:Coding.code [ fhir:value "Y" ];
+         fhir:Coding.display [ fhir:value "Yes" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88.ttl> .
+
+# -------------------------------------------------------------------------------------
+

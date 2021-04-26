@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Organization/6f47da13-0c25-483b-8729-7b96716b17fc> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6f47da13-0c25-483b-8729-7b96716b17fc"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-22T13:44:54.456+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#rcCxHuRNpH2lnKn5" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type bus}\">Non-Healthcare Business or Corporation</span></p><p><b>name</b>: Smith Funeral Home</p><p><b>address</b>: 1011010 Example Street Line 2 Bedford MA 01730 United States </p></div>"
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "bus" ];
+       fhir:Coding.display [ fhir:value "Non-Healthcare Business or Corporation" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "Smith Funeral Home"];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "1011010 Example Street";
+       fhir:index 0
+     ], [
+       fhir:value "Line 2";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Bedford" ];
+     fhir:Address.district [ fhir:value "Middlesex" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01730" ];
+     fhir:Address.country [ fhir:value "United States" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Organization/6f47da13-0c25-483b-8729-7b96716b17fc.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Organization/6f47da13-0c25-483b-8729-7b96716b17fc.ttl> .
+
+# -------------------------------------------------------------------------------------
+

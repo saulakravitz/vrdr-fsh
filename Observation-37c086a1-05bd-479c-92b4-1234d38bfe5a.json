@@ -1,0 +1,87 @@
+{
+  "resourceType": "Observation",
+  "id": "37c086a1-05bd-479c-92b4-1234d38bfe5a",
+  "meta": {
+    "versionId": "6",
+    "lastUpdated": "2020-07-24T15:33:53.596+00:00",
+    "source": "#iofJcQBVEUkPrUdY",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 11374-6}\">Injury incident description Narrative</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>effective</b>: Feb 19, 2018, 9:48:06 PM</p><p><b>value</b>: Feb 19, 2018, 9:48:06 PM</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69450-5}\">Place of injury Facility</span></p><p><b>value</b>: <span title=\"Codes: \">Home</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69444-8}\">Did death result from injury at work</span></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}\">No</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69448-9}\">Injury leading to death associated with transportation event</span></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}\">No</span></p></blockquote></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11374-6",
+        "display": "Injury incident description Narrative"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "effectiveDateTime": "2018-02-19T16:48:06-05:00",
+  "valueDateTime": "2018-02-19T16:48:06-05:00",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "69450-5",
+            "display": "Place of injury Facility"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "text": "Home"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "69444-8",
+            "display": "Did death result from injury at work"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code": "N",
+            "display": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "69448-9",
+            "display": "Injury leading to death associated with transportation event"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code": "N",
+            "display": "No"
+          }
+        ]
+      }
+    }
+  ]
+}

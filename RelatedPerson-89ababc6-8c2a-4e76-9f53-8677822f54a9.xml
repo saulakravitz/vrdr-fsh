@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="89ababc6-8c2a-4e76-9f53-8677822f54a9"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-07-22T05:49:29.537+00:00"/>
+    <source value="#Ig5XrcHuNGzpbSuz"/>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>patient</b>: <a href="Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></a></p><p><b>relationship</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}">mother</span></p><p><b>name</b>: Mother Middle Maiden </p></div>
+  </text>
+  <patient>
+    <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="MTH"/>
+      <display value="mother"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Maiden"/>
+    <given value="Mother"/>
+    <given value="Middle"/>
+    <suffix value="Dr."/>
+  </name>
+</RelatedPerson>

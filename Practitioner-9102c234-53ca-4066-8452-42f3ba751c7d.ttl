@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "9102c234-53ca-4066-8452-42f3ba751c7d"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-25T23:44:52.912+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#lSYCtKrCXgjr2pRs" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 1122334455</p><p><b>name</b>: Doctor Middle Last (OFFICIAL)</p></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "1122334455" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Last" ];
+     fhir:HumanName.given [
+       fhir:value "Doctor";
+       fhir:index 0
+     ], [
+       fhir:value "Middle";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr.";
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d.ttl> .
+
+# -------------------------------------------------------------------------------------
+

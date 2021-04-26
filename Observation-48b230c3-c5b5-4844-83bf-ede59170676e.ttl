@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/48b230c3-c5b5-4844-83bf-ede59170676e> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "48b230c3-c5b5-4844-83bf-ede59170676e"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-23T14:19:04.167+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#pXRxySPzm18x6rcs" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 21843-8}\">History of Usual occupation</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>effective</b>: 1920-01-07 --&gt; 2018-02-19</p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://loinc.org 21844-6}\">History of Usual industry</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:21843-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "21843-8" ];
+       fhir:Coding.display [ fhir:value "History of Usual occupation" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Observation.effectivePeriod [
+     fhir:Period.start [ fhir:value "1920-01-07"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2018-02-19"^^xsd:date ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:21844-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "21844-6" ];
+         fhir:Coding.display [ fhir:value "History of Usual industry" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/48b230c3-c5b5-4844-83bf-ede59170676e.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Observation/48b230c3-c5b5-4844-83bf-ede59170676e.ttl> .
+
+# -------------------------------------------------------------------------------------
+

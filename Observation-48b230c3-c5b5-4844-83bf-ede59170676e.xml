@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="48b230c3-c5b5-4844-83bf-ede59170676e"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-07-23T14:19:04.167+00:00"/>
+    <source value="#pXRxySPzm18x6rcs"/>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 21843-8}">History of Usual occupation</span></p><p><b>subject</b>: <a href="Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></a></p><p><b>effective</b>: 1920-01-07 --&gt; 2018-02-19</p><h3>Components</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td><span title="Codes: {http://loinc.org 21844-6}">History of Usual industry</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="21843-8"/>
+      <display value="History of Usual occupation"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+  </subject>
+  <effectivePeriod>
+    <start value="1920-01-07"/>
+    <end value="2018-02-19"/>
+  </effectivePeriod>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="21844-6"/>
+        <display value="History of Usual industry"/>
+      </coding>
+    </code>
+  </component>
+</Observation>

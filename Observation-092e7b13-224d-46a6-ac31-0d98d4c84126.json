@@ -1,0 +1,38 @@
+{
+  "resourceType": "Observation",
+  "id": "092e7b13-224d-46a6-ac31-0d98d4c84126",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-07-21T23:35:04.301+00:00",
+    "source": "#WrDQeRxZcljjquQJ",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69442-2}\">Timing of recent pregnancy in relation to death</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-NullFlavor NA}\">not applicable</span></p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "69442-2",
+        "display": "Timing of recent pregnancy in relation to death"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "code": "NA",
+        "display": "not applicable"
+      }
+    ]
+  }
+}

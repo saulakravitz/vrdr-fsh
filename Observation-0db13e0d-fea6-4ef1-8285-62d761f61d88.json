@@ -1,0 +1,60 @@
+{
+  "resourceType": "Observation",
+  "id": "0db13e0d-fea6-4ef1-8285-62d761f61d88",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2020-07-21T00:53:25.201+00:00",
+    "source": "#brM1jqtwMAqwn7Dl",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 85699-7}\">Autopsy was performed</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 Y}\">Yes</span></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://loinc.org 69436-4}\">Autopsy results available</span></td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 Y}\">Yes</span></td></tr></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85699-7",
+        "display": "Autopsy was performed"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "code": "Y",
+        "display": "Yes"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "69436-4",
+            "display": "Autopsy results available"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code": "Y",
+            "display": "Yes"
+          }
+        ]
+      }
+    }
+  ]
+}

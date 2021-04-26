@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/9676ae27-2a89-4295-913c-0d6847300a3a> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "9676ae27-2a89-4295-913c-0d6847300a3a"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-22T05:25:50.595+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#j3yydvKd5etH1fHS" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 80913-7}\">Highest level of education [US Standard Certificate of Death]</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>value</b>: <span title=\"Codes: {https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7385 PHC1453}\">Bachelor's Degree</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:80913-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "80913-7" ];
+       fhir:Coding.display [ fhir:value "Highest level of education [US Standard Certificate of Death]" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7385" ];
+       fhir:Coding.code [ fhir:value "PHC1453" ];
+       fhir:Coding.display [ fhir:value "Bachelor's Degree" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/9676ae27-2a89-4295-913c-0d6847300a3a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Observation/9676ae27-2a89-4295-913c-0d6847300a3a.ttl> .
+
+# -------------------------------------------------------------------------------------
+

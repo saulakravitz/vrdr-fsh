@@ -1,0 +1,48 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "bafe16b9-8b50-47e1-829a-a7dbafb45e05",
+  "meta": {
+    "versionId": "4",
+    "lastUpdated": "2020-08-18T14:05:00.835+00:00",
+    "source": "#8iRGOaZ9QyOQtkXP",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: urn:uuid:bafe16b9-8b50-47e1-829a-a7dbafb45e05</p><p><b>status</b>: current</p><p><b>type</b>: <span title=\"Codes: {http://loinc.org 64297-5}\">Death certificate</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>date</b>: Dec 23, 2005, 10:43:41 PM</p><p><b>author</b>: <a href=\"Organization-1a110397-936f-4be4-ab10-2caed226569d.html\">Generated Summary: id: 1010101; active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: Example Hospital</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:bafe16b9-8b50-47e1-829a-a7dbafb45e05"
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "64297-5",
+        "display": "Death certificate"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "date": "2005-12-24T09:43:41+11:00",
+  "author": [
+    {
+      "reference": "Organization/1a110397-936f-4be4-ab10-2caed226569d"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "url": "urn:uuid:7a4613cc-b306-49b2-a428-9f8e67e67a85"
+      }
+    }
+  ]
+}

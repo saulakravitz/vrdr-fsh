@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cb1219bc-785f-431c-9f56-b8fbbe78bc4d"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-21T01:29:51.589+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#oHTVk2uNpGANjZpI" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 2233445511</p><p><b>name</b>: Doctor Middle Last (OFFICIAL)</p><p><b>address</b>: 11 Example Street Line 2 Bedford MA 01730 United States </p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>id: 789123456</td><td><span title=\"Codes: {http://snomed.info/sct 309343006}\">Physician</span></td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "2233445511" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Last" ];
+     fhir:HumanName.given [
+       fhir:value "Doctor";
+       fhir:index 0
+     ], [
+       fhir:value "Middle";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "11 Example Street";
+       fhir:index 0
+     ], [
+       fhir:value "Line 2";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Bedford" ];
+     fhir:Address.district [ fhir:value "Middlesex" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01730" ];
+     fhir:Address.country [ fhir:value "United States" ]
+  ];
+  fhir:Practitioner.qualification [
+     fhir:index 0;
+     fhir:Practitioner.qualification.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "789123456" ]
+     ];
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:309343006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "309343006" ];
+         fhir:Coding.display [ fhir:value "Physician" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d.ttl> .
+
+# -------------------------------------------------------------------------------------
+

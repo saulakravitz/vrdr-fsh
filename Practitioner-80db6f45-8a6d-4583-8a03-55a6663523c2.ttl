@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "80db6f45-8a6d-4583-8a03-55a6663523c2"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-22T04:35:39.126+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#Mze6QKeTUorpQzO2" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 1122334455</p><p><b>name</b>: FD Middle Last (OFFICIAL)</p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>id: 9876543210</td><td><span title=\"Codes: {http://snomed.info/sct 309343006}\">Physician</span></td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "1122334455" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Last" ];
+     fhir:HumanName.given [
+       fhir:value "FD";
+       fhir:index 0
+     ], [
+       fhir:value "Middle";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.qualification [
+     fhir:index 0;
+     fhir:Practitioner.qualification.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "9876543210" ]
+     ];
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:309343006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "309343006" ];
+         fhir:Coding.display [ fhir:value "Physician" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Physician" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2.ttl> .
+
+# -------------------------------------------------------------------------------------
+

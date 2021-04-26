@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "4d0ce010-16f1-44f4-bbf8-3a2030e9de99"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-21T22:40:43.185+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#cIJIQkq7Q2smLbo1" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69443-0}\">Did tobacco use contribute to death</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 373066001}\">Yes</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:69443-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "69443-0" ];
+       fhir:Coding.display [ fhir:value "Did tobacco use contribute to death" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:373066001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "373066001" ];
+       fhir:Coding.display [ fhir:value "Yes" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99.ttl> .
+
+# -------------------------------------------------------------------------------------
+

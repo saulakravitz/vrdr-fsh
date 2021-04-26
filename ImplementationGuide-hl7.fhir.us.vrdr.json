@@ -1,0 +1,1461 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.vrdr",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>VRDR</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr</pre></div>"
+  },
+  "url": "http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr",
+  "version": "1.0.0",
+  "name": "VRDR",
+  "status": "draft",
+  "date": "2021-04-26T22:37:24+00:00",
+  "publisher": "HL7 Public Health Working Group",
+  "contact": [
+    {
+      "name": "HL7 Public Health Working Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/pher/index.cfm"
+        },
+        {
+          "system": "email",
+          "value": "pher@lists.HL7.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.us.vrdr",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "id": "hl7_fhir_us_core",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "packageId": "hl7.fhir.us.core",
+      "version": "3.1.0"
+    },
+    {
+      "id": "hl7_fhir_us_odh",
+      "uri": "http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh",
+      "packageId": "hl7.fhir.us.odh",
+      "version": "1.0.0"
+    },
+    {
+      "id": "us_cdc_phinvads",
+      "uri": "http://fhir.org/packages/us.cdc.phinvads",
+      "packageId": "us.cdc.phinvads",
+      "version": "0.7.0"
+    }
+  ],
+  "definition": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "copyrightyear"
+          },
+          {
+            "url": "value",
+            "valueString": "2021+"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "releaselabel"
+          },
+          {
+            "url": "value",
+            "valueString": "vrdr"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "show-inherited-invariants"
+          },
+          {
+            "url": "value",
+            "valueString": "false"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "jira-code"
+          },
+          {
+            "url": "value",
+            "valueString": "vrdr"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-history"
+          },
+          {
+            "url": "value",
+            "valueString": "http://hl7.org/fhir/us/vrdr/history.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "template/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "input/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-qa"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/qa"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-temp"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/pages"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-output"
+          },
+          {
+            "url": "value",
+            "valueString": "output"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-suppressed-warnings"
+          },
+          {
+            "url": "value",
+            "valueString": "input/ignoreWarnings.txt"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-html"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-md"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page-md.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-contact"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-context"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-copyright"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-jurisdiction"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-license"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-publisher"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-version"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "active-tables"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      }
+    ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Cause-Of-Death-Condition"
+        },
+        "name": "VRDR Cause Of Death Condition",
+        "description": "The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Condition-Contributing-To-Death"
+        },
+        "name": "VRDR Condition Contributing To Death",
+        "description": "The Condition Contributing to Death profile is used to identify factors contributing to the cause of death as asserted by the death certifier. The Condition Contributing To Death profile builds upon the FHIR condition resource.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Certificate"
+        },
+        "name": "VRDR Death Certificate",
+        "description": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Certificate-Document"
+        },
+        "name": "VRDR Death Certificate Document",
+        "description": "The Death Certificate Document profile is a bundle of resources comprising the death certificate composition. The Death Certificate Document builds upon the FHIR Document resource.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Certificate-Reference"
+        },
+        "name": "VRDR Death Certificate Reference",
+        "description": "The Death Certificate Reference profile is used to enable interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Certification"
+        },
+        "name": "VRDR Death Certification",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Location"
+        },
+        "name": "VRDR Death Location",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Pronouncement-Performer"
+        },
+        "name": "VRDR Death Pronouncement Performer",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent"
+        },
+        "name": "VRDR Decedent",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Age"
+        },
+        "name": "VRDR Decedent Age",
+        "description": "The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Education-Level"
+        },
+        "name": "VRDR Decedent Education Level",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Father"
+        },
+        "name": "Decedent Father",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Pregnancy"
+        },
+        "name": "VRDR Decedent Pregnancy",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Spouse"
+        },
+        "name": "VRDR Decedent Spouse",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Transportation-Role"
+        },
+        "name": "VRDR Decedent Transportation Role",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Disposition-Location"
+        },
+        "name": "VRDR Disposition Location",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Examiner-Contacted"
+        },
+        "name": "VRDR Examiner Contacted",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Funeral-Home"
+        },
+        "name": "VRDR Funeral Home",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Funeral-Service-Licensee"
+        },
+        "name": "VRDR Funeral Service Licensee",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-InjuryIncident"
+        },
+        "name": "VRDR Injury Incident",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Injury-Location"
+        },
+        "name": "VRDR Injury Location",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Interested-Party"
+        },
+        "name": "VRDR Interested Party",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Manner-of-Death"
+        },
+        "name": "VRDR Manner of Death",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Mortician"
+        },
+        "name": "VRDR Mortician",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"
+        },
+        "name": "VRDR Tobacco Use Contributed To Death",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Autopsy-Performed-Indicator"
+        },
+        "name": "VRDR Autopsy Performed Indicator",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-BirthRecordIdentifier"
+        },
+        "name": "VRDR Birth Record Identifier",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Cause-of-Death-Pathway"
+        },
+        "name": "VRDR Cause of Death Pathway",
+        "description": "VRDR Cause of Death Pathway is an ordered list of cause of death conditions. It builds upon the FHIR LIST resource. The source of VRDR Cause of Death Pathway (LIST.source) is a cause of death certifier. ",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Certifier"
+        },
+        "name": "VRDR Certifier",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Death-Date"
+        },
+        "name": "VRDR_DeathDate",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Disposition-Method"
+        },
+        "name": "Decedent Disposition Method",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Military-Service"
+        },
+        "name": "Decedent Military Service",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Mother"
+        },
+        "name": "Decedent Mother",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/VRDR-Decedent-Usual-Work"
+        },
+        "name": "VRDR_DecedentUsualWork",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/Location-Jurisdiction-Id"
+        },
+        "name": "Location Jurisdiction Id",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/Observation-Location"
+        },
+        "name": "Observation Location",
+        "description": "The location of the observed phenomenon or entity that is the subject of the observation.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/Within-City-Limits-Indicator"
+        },
+        "name": "VRDR Within City Limits Indicator",
+        "description": "Used to indicate whether or not an address is within city limits. The content of the component shall be a value from the value set Yes No Unknown.  ",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/092e7b13-224d-46a6-ac31-0d98d4c84126"
+        },
+        "name": "Decedent Pregnancy Example",
+        "description": "An instance example of the VRDR-Decedent-Pregnancy resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88"
+        },
+        "name": "Autopsy Performed Indicator Instance Example",
+        "description": "Instance example of the Autopsy Performed Indicator resource profile. This example indicates that an autopsy was performed and that the results of the autopsy are available.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/1a110397-936f-4be4-ab10-2caed226569d"
+        },
+        "name": "Interested Party Instance Example",
+        "description": "An instance example of the Interested Party resource profile. In the example, Example Hospital from MA is an active Healthcare Provider interested party.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Procedure"
+          }
+        ],
+        "reference": {
+          "reference": "Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"
+        },
+        "name": "Death Certification Instance Example",
+        "description": "An instance example of a Death Certification resource profile. This example Death Certification procedure performed by a physician on 2019-01-29.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a"
+        },
+        "name": "Injury Incident Example",
+        "description": "An instance example of the VRDR-InjuryIncident resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/4424113f-69c4-40fe-b88f-d7b03304dfe4"
+        },
+        "name": "Decedent Transportation Role Example",
+        "description": "An instance example of the VRDR-Decedent-Transportation-Role resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/48b230c3-c5b5-4844-83bf-ede59170676e"
+        },
+        "name": "Decedent Usual Work Example",
+        "description": "An instance example of the VRDR-Decedent-Usual-Work resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/4aed1450-ab2d-4cb9-858f-227b127323a6"
+        },
+        "name": "Examiner Contacted Example",
+        "description": "An instance example of the VRDR-Examiner-Contacted resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a"
+        },
+        "name": "Injury Location",
+        "description": "An instance example of the VRDR-Injury-Location resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/4b96759f-8395-4093-8417-e1ca3cd26f0a"
+        },
+        "name": "Funeral Service Licensee Example",
+        "description": "An instance example of the VRDR-Funeral-Service-Licensee resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99"
+        },
+        "name": "Tobacco Use Contributed To Death",
+        "description": "An instance example of the VRDR-Tobacco-Use-Contributed-To-Death resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+        },
+        "name": "Decedent Instance Example",
+        "description": "An instance example of the VRDR Decedent resource profile. Mr. Example Last, a White, Native Hawaiian, Hispanic male born 1940-02-19 and residing in Middlesex, MA.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30"
+        },
+        "name": "Death Certificate Example",
+        "description": "An instance example of the VRDR-Death-Certificate resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
+          "reference": "Condition/56b8ce2e-64f8-450b-8885-0699a53fc781"
+        },
+        "name": "Condition Contributing To Death Example",
+        "description": "An instance example of the VRDR-Condition-Contributing-To-Death resource profile. In this example, the condition is noted as text only. This is typical of a death record outbound from a jurisdictional EDRS to the NCHS.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "List"
+          }
+        ],
+        "reference": {
+          "reference": "List/60401545-f1e1-4a80-867f-02384ffed857"
+        },
+        "name": "Cause of Death Pathway Example",
+        "description": "An instance example of the VRDR-Cause-of-Death-Pathway resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/636dafac-0d92-4649-b838-004bcf714f5aj"
+        },
+        "name": "Decedent Military Service Example",
+        "description": "An instance example of the VRDR-Decedent-Military-Service",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7"
+        },
+        "name": "Birth Record Identifier Example",
+        "description": "An instance example of the Birth Record Identifier resource profile.  In this example Birth Record identifier 4242123 denotes Massachusetts and 1940 as the birthplace and birth year of the decedent.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/6f47da13-0c25-483b-8729-7b96716b17fc"
+        },
+        "name": "Funeral Home Example",
+        "description": "An instance example of the VRDR-Funeral-Home resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/79ee2174-1469-4301-a667-6332d4d26198"
+        },
+        "name": "79ee2174-1469-4301-a667-6332d4d26198",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85"
+        },
+        "name": "Death Certificate Document Example",
+        "description": "An instance example of the VRDR-Death-Certificate-Document resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2"
+        },
+        "name": "Mortician Example",
+        "description": "An instance example of the VRDR-Mortician resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "RelatedPerson"
+          }
+        ],
+        "reference": {
+          "reference": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9"
+        },
+        "name": "Decedent Mother Example",
+        "description": "An instance example of the VRDR-Decedent-Mother resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d"
+        },
+        "name": "Death Pronouncement Performer Example",
+        "description": "An instance example of the VRDR-Death-Pronouncement-Performer resource profile",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "RelatedPerson"
+          }
+        ],
+        "reference": {
+          "reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f"
+        },
+        "name": "Decedent Spouse Example",
+        "description": "An instance example of the VRDR-Decedent-Spouse example.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/9676ae27-2a89-4295-913c-0d6847300a3a"
+        },
+        "name": "Decedent Education Level Example",
+        "description": "An instance example of the VRDR-Decedent-Education-Level resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "RelatedPerson"
+          }
+        ],
+        "reference": {
+          "reference": "RelatedPerson/976c548f-9460-42f2-b41e-390b3bee91c8"
+        },
+        "name": "Decedent Father Example",
+        "description": "An instance example of the VRDR-Decedent-Father resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/b531cbf7-6290-424c-8155-0549c3fb3243"
+        },
+        "name": "Death Date Example",
+        "description": "An instance example of the VRDR-Death-Date resource profile. In this example, the date and time of death is 2018-02-20T16:48:06-05:00. The Date and time pronounced dead is also  2018-02-20T16:48:06-05:00.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/b7de6056-817f-4d73-9830-ce566accd044"
+        },
+        "name": "Death Location Example",
+        "description": "An instance example of the VRDR-Death-Location resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DocumentReference"
+          }
+        ],
+        "reference": {
+          "reference": "DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05"
+        },
+        "name": "Death Certificate Reference Example",
+        "description": "An instance example of the VRDR-Death-Certificate-Reference resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/bbe38248-9a8d-414f-996e-58d5fc9eb800"
+        },
+        "name": "Disposition Location Example",
+        "description": "Instance example of the VRDR-Disposition-Location resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
+        },
+        "name": "Certifier Instance Example",
+        "description": "An instance example of a Certifier resource profile. This example is a certifying physician.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813"
+        },
+        "name": "Manner of Death Example",
+        "description": "An instance example of the VRDR-Manner-of-Death resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/d80681ff-9f1d-4915-87b5-eda54534096a"
+        },
+        "name": "Decedent Disposition Method Example",
+        "description": "An instance example of the VRDR-Decedent-Disposition-Method resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b"
+        },
+        "name": "Decedent Age Example",
+        "description": "An instance example of the VRDR-Decedent-Age resource profile. In this example, the decedent is identified as 79 years in age.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
+          "reference": "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666"
+        },
+        "name": "Cause Of Death Condition Example",
+        "description": "An instance example of the VRDR-Cause-Of-Death-Condition resource profile.",
+        "exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "acknowledgements.html",
+          "title": "Acknowledgements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "death_certification_resource_profiles.html",
+          "title": "Death Certification Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "death_investigation_resource_profiles.html",
+          "title": "Death Investigation Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "death_reporting_dataflow.html",
+          "title": "Death Reporting Dataflow",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "decedent_demographics_resource_profiles.html",
+          "title": "Decedent Demographics Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "decedent_disposition_resource_profiles.html",
+          "title": "Decedent Disposition Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "project_team.html",
+          "title": "Project Team",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "scope_of_the_vrdr_fhir_ig.html",
+          "title": "Scope of the Vrdr Fhir Ig",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology_bindings.html",
+          "title": "Terminology Bindings",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "vrdr_fhir_ig_uml_data_model.html",
+          "title": "Vrdr Fhir Ig Uml Data Model",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "path-resource",
+        "value": "input/capabilities"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/examples"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/extensions"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/models"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/operations"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/profiles"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/maps"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/testing"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/history"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "template/config"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/images"
+      },
+      {
+        "code": "path-tx-cache",
+        "value": "input-cache/txcache"
+      }
+    ]
+  }
+}
