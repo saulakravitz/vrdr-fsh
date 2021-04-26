@@ -30,9 +30,9 @@ jobs:
         run: gem install jekyll --no-document
       - name: Get Publisher Jar using curl
         run: mkdir input-cache; ls -l ;curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
-      - name: Run IG Publisher
+      - name: Run IG Publisher 
         run: java -jar ./input-cache/publisher.jar publisher -no-sushi -ig .
-      - name: Push changes
+      - name: Push changes with keys
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
