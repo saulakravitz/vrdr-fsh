@@ -20,6 +20,10 @@ parameters:
   show-inherited-invariants: false
   jira-code: vrdr
 copyrightYear: 2021+
+publisher:
+  name: HL7 Public Health Working Group
+  url: http://www.hl7.org/Special/committees/pher/index.cfm
+  email: pher@lists.HL7.org
 # ╭───────────────────ImplementationGuide-hl7.fhir.us.davinci-pdex-plan-net.json───────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
