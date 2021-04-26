@@ -28,12 +28,11 @@ jobs:
         run: npm install fsh-sushi --nosave
       - name: Run fsh-sushi
         run: node_modules/fsh-sushi/dist/app.js . ; ls -lR fsh-generated
+      - name: Download genonce
+        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh" -o _genonce.sh; chmod +x ./_genonce.sh
       - name: Download updatePublisher
-        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh" -o _updatePublisher.sh; chmod +x ./_updatePublisher.sh 
-     - name: Download genonce
-        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh" -o _genonce.sh; chmod +x ./_genonce.sh 
-UpdatePublisher
-      -name: Run gork UpdatePublisher.sh
+        run: curl "https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh" -o _updatePublisher.sh; chmod +x ./_updatePublisher.sh
+       -name: Run gork UpdatePublisher.sh
         run: mkdir input-cache; ls -l ;./_updatePublisher.sh --force
       - name: Run genonce.sh
         run: ./_genonce.sh
