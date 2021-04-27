@@ -1,0 +1,40 @@
+{
+  "resourceType": "Location",
+  "id": "b7de6056-817f-4d73-9830-ce566accd044",
+  "meta": {
+    "versionId": "21",
+    "lastUpdated": "2020-08-19T08:29:15.044+00:00",
+    "source": "#wKKh1WwcfoE82FMR",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Example Death Location Name</p><p><b>description</b>: Example Death Location Description</p><p><b>type</b>: <span title=\"Codes: {http://snomed.info/sct 16983000}\">Death in hospital</span></p><p><b>address</b>: 671 Example Street Line 2 Bedford MA 01730 United States </p></div>"
+  },
+  "name": "Example Death Location Name",
+  "description": "Example Death Location Description",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "16983000",
+          "display": "Death in hospital"
+        }
+      ]
+    }
+  ],
+  "address": {
+    "line": [
+      "671 Example Street",
+      "Line 2"
+    ],
+    "city": "Bedford",
+    "district": "Middlesex",
+    "state": "MA",
+    "postalCode": "01730",
+    "country": "United States"
+  }
+}

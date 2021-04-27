@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="37c086a1-05bd-479c-92b4-1234d38bfe5a"/>
+  <meta>
+    <versionId value="6"/>
+    <lastUpdated value="2020-07-24T15:33:53.596+00:00"/>
+    <source value="#iofJcQBVEUkPrUdY"/>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 11374-6}">Injury incident description Narrative</span></p><p><b>subject</b>: <a href="Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></a></p><p><b>effective</b>: Feb 19, 2018, 9:48:06 PM</p><p><b>value</b>: Feb 19, 2018, 9:48:06 PM</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 69450-5}">Place of injury Facility</span></p><p><b>value</b>: <span title="Codes: ">Home</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 69444-8}">Did death result from injury at work</span></p><p><b>value</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}">No</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 69448-9}">Injury leading to death associated with transportation event</span></p><p><b>value</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}">No</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11374-6"/>
+      <display value="Injury incident description Narrative"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+  </subject>
+  <effectiveDateTime value="2018-02-19T16:48:06-05:00"/>
+  <valueDateTime value="2018-02-19T16:48:06-05:00"/>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="69450-5"/>
+        <display value="Place of injury Facility"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <text value="Home"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="69444-8"/>
+        <display value="Did death result from injury at work"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0136"/>
+        <code value="N"/>
+        <display value="No"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="69448-9"/>
+        <display value="Injury leading to death associated with transportation event"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0136"/>
+        <code value="N"/>
+        <display value="No"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

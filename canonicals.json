@@ -1,0 +1,268 @@
+[
+  {
+    "id": "hl7.fhir.us.vrdr",
+    "type": "ImplementationGuide",
+    "url": "http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr",
+    "version": "1.0.0",
+    "name": "VRDR"
+  },
+  {
+    "id": "Location-Jurisdiction-Id",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id",
+    "version": "1.0.0",
+    "name": "LocationJurisdictionId"
+  },
+  {
+    "id": "Observation-Location",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location",
+    "version": "1.0.0",
+    "name": "ObservationLocation"
+  },
+  {
+    "id": "VRDR-Autopsy-Performed-Indicator",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator",
+    "version": "1.0.0",
+    "name": "VRDR_AutopsyPerformedIndicator"
+  },
+  {
+    "id": "VRDR-BirthRecordIdentifier",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier",
+    "version": "1.0.0",
+    "name": "VRDR_BirthRecordIdentifier"
+  },
+  {
+    "id": "VRDR-Cause-Of-Death-Condition",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition",
+    "version": "1.0.0",
+    "name": "CauseOfDeathCondition"
+  },
+  {
+    "id": "VRDR-Cause-of-Death-Pathway",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway",
+    "version": "1.0.0",
+    "name": "VRDR_CauseOfDeathPathway"
+  },
+  {
+    "id": "VRDR-Certifier",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier",
+    "version": "1.0.0",
+    "name": "VRDR_Certifier"
+  },
+  {
+    "id": "VRDR-Condition-Contributing-To-Death",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death",
+    "version": "1.0.0",
+    "name": "ConditionContributingToDeath"
+  },
+  {
+    "id": "VRDR-Death-Certificate",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
+    "version": "1.0.0",
+    "name": "DeathCertificate"
+  },
+  {
+    "id": "VRDR-Death-Certificate-Document",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
+    "version": "1.0.0",
+    "name": "DeathCertificateDocument"
+  },
+  {
+    "id": "VRDR-Death-Certificate-Reference",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference",
+    "version": "1.0.0",
+    "name": "DeathCertificateReference"
+  },
+  {
+    "id": "VRDR-Death-Certification",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification",
+    "version": "1.0.0",
+    "name": "DeathCertification"
+  },
+  {
+    "id": "VRDR-Death-Date",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date",
+    "version": "1.0.0",
+    "name": "VRDR_DeathDate"
+  },
+  {
+    "id": "VRDR-Death-Location",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
+    "version": "1.0.0",
+    "name": "DeathLocation"
+  },
+  {
+    "id": "VRDR-Death-Pronouncement-Performer",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer",
+    "version": "1.0.0",
+    "name": "DeathPronouncementPerformer"
+  },
+  {
+    "id": "VRDR-Decedent",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
+    "version": "1.0.0",
+    "name": "Decedent"
+  },
+  {
+    "id": "VRDR-Decedent-Age",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age",
+    "version": "1.0.0",
+    "name": "DecedentAge"
+  },
+  {
+    "id": "VRDR-Decedent-Disposition-Method",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method",
+    "version": "1.0.0",
+    "name": "VRDR_DecedentDispositionMethod"
+  },
+  {
+    "id": "VRDR-Decedent-Education-Level",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level",
+    "version": "1.0.0",
+    "name": "DecedentEducationLevel"
+  },
+  {
+    "id": "VRDR-Decedent-Father",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father",
+    "version": "1.0.0",
+    "name": "DecedentFather"
+  },
+  {
+    "id": "VRDR-Decedent-Military-Service",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service",
+    "version": "1.0.0",
+    "name": "VRDR_DecedentMilitaryService"
+  },
+  {
+    "id": "VRDR-Decedent-Mother",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother",
+    "version": "1.0.0",
+    "name": "VRDR_DecedentMother"
+  },
+  {
+    "id": "VRDR-Decedent-Pregnancy",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy",
+    "version": "1.0.0",
+    "name": "DecedentPregnancy"
+  },
+  {
+    "id": "VRDR-Decedent-Spouse",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse",
+    "version": "1.0.0",
+    "name": "DecedentSpouse"
+  },
+  {
+    "id": "VRDR-Decedent-Transportation-Role",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role",
+    "version": "1.0.0",
+    "name": "DecedentTransportationRole"
+  },
+  {
+    "id": "VRDR-Decedent-Usual-Work",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work",
+    "version": "1.0.0",
+    "name": "VRDR_DecedentUsualWork"
+  },
+  {
+    "id": "VRDR-Disposition-Location",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location",
+    "version": "1.0.0",
+    "name": "DispositionLocation"
+  },
+  {
+    "id": "VRDR-Examiner-Contacted",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted",
+    "version": "1.0.0",
+    "name": "ExaminerContacted"
+  },
+  {
+    "id": "VRDR-Funeral-Home",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home",
+    "version": "1.0.0",
+    "name": "FuneralHome"
+  },
+  {
+    "id": "VRDR-Funeral-Service-Licensee",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee",
+    "version": "1.0.0",
+    "name": "FuneralServiceLicensee"
+  },
+  {
+    "id": "VRDR-Injury-Location",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location",
+    "version": "1.0.0",
+    "name": "InjuryLocation"
+  },
+  {
+    "id": "VRDR-InjuryIncident",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
+    "version": "1.0.0",
+    "name": "InjuryIncident"
+  },
+  {
+    "id": "VRDR-Interested-Party",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party",
+    "version": "1.0.0",
+    "name": "InterestedParty"
+  },
+  {
+    "id": "VRDR-Manner-of-Death",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death",
+    "version": "1.0.0",
+    "name": "MannerOfDeath"
+  },
+  {
+    "id": "VRDR-Mortician",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician",
+    "version": "1.0.0",
+    "name": "Mortician"
+  },
+  {
+    "id": "VRDR-Tobacco-Use-Contributed-To-Death",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death",
+    "version": "1.0.0",
+    "name": "TobaccoUseContributedToDeath"
+  },
+  {
+    "id": "Within-City-Limits-Indicator",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator",
+    "version": "1.0.0",
+    "name": "Within_City_Limits_Indicator"
+  }
+]

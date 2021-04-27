@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f0cbc63d-ac4e-469b-8761-70b6ea8bf666"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-23T00:39:07.292+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#gvQxSpDrQsJLuHBR" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 16100001}\">Death diagnosis</span></p><p><b>code</b>: <span title=\"Codes: \">Acute transmural myocardial infarction of anterior wall</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>onset</b>: minutes</p><p><b>asserter</b>: <a href=\"Practitioner-cb1219bc-785f-431c-9f56-b8fbbe78bc4d.html\">Generated Summary: id: 2233445511; Doctor Middle Last (OFFICIAL)</a></p></div>"
+  ];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:16100001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "16100001" ];
+       fhir:Coding.display [ fhir:value "Death diagnosis" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.text [ fhir:value "Acute transmural myocardial infarction of anterior wall" ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Condition.onsetString [ fhir:value "minutes"];
+  fhir:Condition.asserter [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d>;
+     fhir:Reference.reference [ fhir:value "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d" ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666.ttl> .
+
+# -------------------------------------------------------------------------------------
+

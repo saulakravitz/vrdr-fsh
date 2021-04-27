@@ -1,0 +1,66 @@
+{
+  "resourceType": "Practitioner",
+  "id": "cb1219bc-785f-431c-9f56-b8fbbe78bc4d",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-07-21T01:29:51.589+00:00",
+    "source": "#oHTVk2uNpGANjZpI",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 2233445511</p><p><b>name</b>: Doctor Middle Last (OFFICIAL)</p><p><b>address</b>: 11 Example Street Line 2 Bedford MA 01730 United States </p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>id: 789123456</td><td><span title=\"Codes: {http://snomed.info/sct 309343006}\">Physician</span></td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "2233445511"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Last",
+      "given": [
+        "Doctor",
+        "Middle"
+      ],
+      "suffix": [
+        "Jr."
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "11 Example Street",
+        "Line 2"
+      ],
+      "city": "Bedford",
+      "district": "Middlesex",
+      "state": "MA",
+      "postalCode": "01730",
+      "country": "United States"
+    }
+  ],
+  "qualification": [
+    {
+      "identifier": [
+        {
+          "value": "789123456"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "309343006",
+            "display": "Physician"
+          }
+        ]
+      }
+    }
+  ]
+}

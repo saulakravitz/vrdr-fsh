@@ -1,0 +1,446 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "d05c1443-20c5-461a-8b61-d7ce3d3f9ef1-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/d05c1443-20c5-461a-8b61-d7ce3d3f9ef1-6",
+  "name" : "IntersectionUSCoreDocumentReferenceTypeAndDocumentTypeValueSet",
+  "title" : "Intersection of US Core DocumentReference Type And Document Type Value Set",
+  "status" : "active",
+  "date" : "2021-04-26T22:37:42+00:00",
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "11485-0",
+      "display" : "Anesthesia records"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11486-8",
+      "display" : "Chemotherapy records"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11488-4",
+      "display" : "Consult note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11490-0",
+      "display" : "Physician Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11492-6",
+      "display" : "Provider-unspecifed, History and physical note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11504-8",
+      "display" : "Surgical operation note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11506-3",
+      "display" : "Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11507-1",
+      "display" : "Occupational therapy Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11508-9",
+      "display" : "Physical therapy Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11509-7",
+      "display" : "Podiatry Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11510-5",
+      "display" : "Psychology Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11512-1",
+      "display" : "Speech-language pathology Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "15507-7",
+      "display" : "Emergency department Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18733-6",
+      "display" : "Attending Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18740-1",
+      "display" : "Speech-language pathology Initial evaluation note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18743-5",
+      "display" : "Autopsy report"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18761-7",
+      "display" : "Transfer summary note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18842-5",
+      "display" : "Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24543-1",
+      "display" : "RFA Guidance for angioplasty of Thoracic and abdominal aorta-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24553-0",
+      "display" : "RFA Guidance for embolectomy of Intracranial vessel-- W contrast IV"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24554-8",
+      "display" : "RFA Guidance for embolization of Artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24568-8",
+      "display" : "RFA Guidance for atherectomy of AV fistula-- W contrast IV"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24580-3",
+      "display" : "RFA Guidance for angioplasty of Brachiocephalic artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24598-5",
+      "display" : "MG Guidance for fluid aspiration of Breast"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24611-6",
+      "display" : "Outpatient Consultation 2nd opinion"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24614-0",
+      "display" : "RFA Guidance for angioplasty of Carotid artery extracranial-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24615-7",
+      "display" : "RFA Guidance for angioplasty of Carotid artery.intracranial-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24623-1",
+      "display" : "CT Guidance for nerve block of Celiac plexus"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24631-4",
+      "display" : "RF Unspecified body region Views for central venous catheter placement check"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24662-9",
+      "display" : "US Guidance for fluid aspiration of Pleural space"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24684-3",
+      "display" : "RFA Guidance for embolectomy of Extracranial vessels-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24698-3",
+      "display" : "RFA Guidance for angioplasty of Femoral artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24754-4",
+      "display" : "Administration of vasodilator into catheter Vein"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24766-8",
+      "display" : "RFA Guidance for angioplasty of Iliac artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24771-8",
+      "display" : "RF Guidance for arthrocentesis of Joint space"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24811-2",
+      "display" : "CT Guidance for fluid aspiration of Liver"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24822-9",
+      "display" : "CT Guidance for fluid aspiration of Lung"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24832-8",
+      "display" : "RFA Guidance for angioplasty of Mesenteric artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24837-7",
+      "display" : "CT Guidance for fluid aspiration of Neck"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24856-7",
+      "display" : "CT Guidance for fluid aspiration of Pancreas"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24863-3",
+      "display" : "CT Guidance for fluid aspiration of Pelvis"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24887-2",
+      "display" : "RFA Guidance for embolectomy of Pulmonary arteries-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24923-5",
+      "display" : "RF Small bowel Views W positive contrast via enteroclysis tube"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24973-0",
+      "display" : "RF Guidance for fluid aspiration of Lumbar spine space"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25012-6",
+      "display" : "Deprecated RFA Guidance for angioplasty of Tibial artery-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25038-1",
+      "display" : "Courtesy consultation Document"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25043-1",
+      "display" : "CT Guidance for fluid aspiration of Unspecified body region"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25062-1",
+      "display" : "XR Unspecified body region Comparison view"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25064-7",
+      "display" : "RFA Vessel Views for angioplasty W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25081-1",
+      "display" : "RFA Guidance for angioplasty of Renal vessel-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26368-1",
+      "display" : "Deprecated Brachiocephalic artery - left Fluoroscopic angiogram Angioplasty W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26369-9",
+      "display" : "Deprecated Brachiocephalic artery - right Fluoroscopic angiogram Angioplasty W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26370-7",
+      "display" : "RFA Guidance for angioplasty of Iliac artery - bilateral-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26371-5",
+      "display" : "RFA Guidance for angioplasty of Iliac artery - left-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26372-3",
+      "display" : "RFA Guidance for angioplasty of Iliac artery - right-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26373-1",
+      "display" : "Deprecated RFA Guidance for angioplasty of Tibial artery - bilateral-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26374-9",
+      "display" : "Deprecated RFA Guidance for angioplasty of Tibial artery - left-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26375-6",
+      "display" : "Deprecated RFA Guidance for angioplasty of Tibial artery - right-- W contrast IA"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26376-4",
+      "display" : "Administration of vasodilator into catheter Vein - bilateral"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26377-2",
+      "display" : "Administration of vasodilator into catheter Vein - left"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26378-0",
+      "display" : "Administration of vasodilator into catheter Vein - right"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28569-2",
+      "display" : "Consultant Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28571-8",
+      "display" : "Speech-language pathology Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28574-2",
+      "display" : "Deprecated Discharge note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28575-9",
+      "display" : "Nurse practitioner Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28578-3",
+      "display" : "Occupational therapy Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28579-1",
+      "display" : "Physical therapy Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28580-9",
+      "display" : "Chiropractic medicine Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28581-7",
+      "display" : "Chiropractic medicine Initial evaluation note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28615-3",
+      "display" : "Audiology study"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28617-9",
+      "display" : "Dentistry Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28618-7",
+      "display" : "Dentistry Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28622-9",
+      "display" : "Deprecated Nurse Discharge assessment"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28623-7",
+      "display" : "Nurse Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28624-5",
+      "display" : "Podiatry Operation note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28626-0",
+      "display" : "Physician History and physical note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28627-8",
+      "display" : "Psychiatry Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28628-6",
+      "display" : "Psychiatry Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28636-9",
+      "display" : "Initial evaluation note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28653-4",
+      "display" : "Social worker Note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28655-9",
+      "display" : "Attending Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28656-7",
+      "display" : "Social worker Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29272-2",
+      "display" : "Eye ultrasound study"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29749-9",
+      "display" : "Dialysis records"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29751-5",
+      "display" : "Critical care records"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29761-4",
+      "display" : "Dentistry Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "30578-9",
+      "display" : "CT Guidance for drainage of abscess and placement of drainage catheter of Unspecified body region"
+    }]
+  }
+}

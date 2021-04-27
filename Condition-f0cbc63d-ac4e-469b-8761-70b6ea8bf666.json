@@ -1,0 +1,37 @@
+{
+  "resourceType": "Condition",
+  "id": "f0cbc63d-ac4e-469b-8761-70b6ea8bf666",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2020-07-23T00:39:07.292+00:00",
+    "source": "#gvQxSpDrQsJLuHBR",
+    "profile": [
+      "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 16100001}\">Death diagnosis</span></p><p><b>code</b>: <span title=\"Codes: \">Acute transmural myocardial infarction of anterior wall</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>onset</b>: minutes</p><p><b>asserter</b>: <a href=\"Practitioner-cb1219bc-785f-431c-9f56-b8fbbe78bc4d.html\">Generated Summary: id: 2233445511; Doctor Middle Last (OFFICIAL)</a></p></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "16100001",
+          "display": "Death diagnosis"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Acute transmural myocardial infarction of anterior wall"
+  },
+  "subject": {
+    "reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+  },
+  "onsetString": "minutes",
+  "asserter": {
+    "reference": "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
+  }
+}

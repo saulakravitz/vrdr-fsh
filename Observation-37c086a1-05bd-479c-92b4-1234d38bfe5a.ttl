@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "37c086a1-05bd-479c-92b4-1234d38bfe5a"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "6" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-24T15:33:53.596+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#iofJcQBVEUkPrUdY" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 11374-6}\">Injury incident description Narrative</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>effective</b>: Feb 19, 2018, 9:48:06 PM</p><p><b>value</b>: Feb 19, 2018, 9:48:06 PM</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69450-5}\">Place of injury Facility</span></p><p><b>value</b>: <span title=\"Codes: \">Home</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69444-8}\">Did death result from injury at work</span></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}\">No</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 69448-9}\">Injury leading to death associated with transportation event</span></p><p><b>value</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0136 N}\">No</span></p></blockquote></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:11374-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "11374-6" ];
+       fhir:Coding.display [ fhir:value "Injury incident description Narrative" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018-02-19T16:48:06-05:00"^^xsd:dateTime];
+  fhir:Observation.valueDateTime [ fhir:value "2018-02-19T16:48:06-05:00"^^xsd:dateTime];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69450-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69450-5" ];
+         fhir:Coding.display [ fhir:value "Place of injury Facility" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.text [ fhir:value "Home" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69444-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69444-8" ];
+         fhir:Coding.display [ fhir:value "Did death result from injury at work" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0136" ];
+         fhir:Coding.code [ fhir:value "N" ];
+         fhir:Coding.display [ fhir:value "No" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69448-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69448-9" ];
+         fhir:Coding.display [ fhir:value "Injury leading to death associated with transportation event" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0136" ];
+         fhir:Coding.code [ fhir:value "N" ];
+         fhir:Coding.display [ fhir:value "No" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a.ttl> .
+
+# -------------------------------------------------------------------------------------
+

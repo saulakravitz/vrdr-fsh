@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="9676ae27-2a89-4295-913c-0d6847300a3a"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-07-22T05:25:50.595+00:00"/>
+    <source value="#j3yydvKd5etH1fHS"/>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 80913-7}">Highest level of education [US Standard Certificate of Death]</span></p><p><b>subject</b>: <a href="Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></a></p><p><b>value</b>: <span title="Codes: {https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7385 PHC1453}">Bachelor's Degree</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="80913-7"/>
+      <display value="Highest level of education [US Standard Certificate of Death]"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7385"/>
+      <code value="PHC1453"/>
+      <display value="Bachelor&#39;s Degree"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

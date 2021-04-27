@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="976c548f-9460-42f2-b41e-390b3bee91c8"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-07-22T13:15:15.056+00:00"/>
+    <source value="#fZ6Xx77uM1YRkplb"/>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>patient</b>: <a href="Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></a></p><p><b>relationship</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FTH}">father</span></p><p><b>name</b>: Father Middle Last </p></div>
+  </text>
+  <patient>
+    <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="FTH"/>
+      <display value="father"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Last"/>
+    <given value="Father"/>
+    <given value="Middle"/>
+    <suffix value="Sr."/>
+  </name>
+</RelatedPerson>

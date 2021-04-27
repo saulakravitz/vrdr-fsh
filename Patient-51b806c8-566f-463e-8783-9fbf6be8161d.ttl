@@ -1,0 +1,199 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "51b806c8-566f-463e-8783-9fbf6be8161d"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-22T19:41:31.297+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#EoJNRyx11BYIT5J6" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 1002-5}\">American Indian or Alaska Native</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2028-9}\">Asian</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 1586-7}\">Shoshone</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2036-2}\">Filipino</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: Mixed</p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2184-0}\">Dominican</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2148-5}\">Mexican</span></p><h3>Urls</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>identifier</b>: Social Beneficiary Identifier: 123456789</p><p><b>name</b>: Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1940-02-19</p><p><b>address</b>: 101 Example Street Line 2 Bedford MA 01730 United States </p><p><b>maritalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1002-5" ];
+         fhir:Coding.display [ fhir:value "American Indian or Alaska Native" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2028-9" ];
+         fhir:Coding.display [ fhir:value "Asian" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1586-7" ];
+         fhir:Coding.display [ fhir:value "Shoshone" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2036-2" ];
+         fhir:Coding.display [ fhir:value "Filipino" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Mixed" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2135-2" ];
+         fhir:Coding.display [ fhir:value "Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2184-0" ];
+         fhir:Coding.display [ fhir:value "Dominican" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2148-5" ];
+         fhir:Coding.display [ fhir:value "Mexican" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Hispanic or Latino" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "F" ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "SB" ];
+         fhir:Coding.display [ fhir:value "Social Beneficiary Identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-ssn" ];
+     fhir:Identifier.value [ fhir:value "123456789" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Last" ];
+     fhir:HumanName.given [
+       fhir:value "Example";
+       fhir:index 0
+     ], [
+       fhir:value "Something";
+       fhir:index 1
+     ], [
+       fhir:value "Middle";
+       fhir:index 2
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr.";
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 1;
+     fhir:HumanName.use [ fhir:value "nickname" ];
+     fhir:HumanName.family [ fhir:value "LastNameAlias" ];
+     fhir:HumanName.given [
+       fhir:value "FirstNameAlias";
+       fhir:index 0
+     ], [
+       fhir:value "MiddleAlias";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1940-02-19"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0136" ];
+         fhir:Coding.code [ fhir:value "N" ];
+         fhir:Coding.display [ fhir:value "No" ]
+       ]
+     ];
+     fhir:Address.line [
+       fhir:value "101 Example Street";
+       fhir:index 0
+     ], [
+       fhir:value "Line 2";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Bedford" ];
+     fhir:Address.district [ fhir:value "Middlesex" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01730" ];
+     fhir:Address.country [ fhir:value "United States" ]
+  ];
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" ];
+       fhir:Coding.code [ fhir:value "S" ];
+       fhir:Coding.display [ fhir:value "Never Married" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d.ttl> .
+
+# -------------------------------------------------------------------------------------
+

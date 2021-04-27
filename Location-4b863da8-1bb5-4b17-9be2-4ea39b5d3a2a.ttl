@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-07-21T21:43:41.124+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#8kCZvAXky7HUqlzZ" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Example Injury Location Name</p><p><b>description</b>: Example Injury Location Description</p><p><b>address</b>: 781 Example Street Line 2 Bedford MA 01730 United States </p></div>"
+  ];
+  fhir:Location.name [ fhir:value "Example Injury Location Name"];
+  fhir:Location.description [ fhir:value "Example Injury Location Description"];
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "781 Example Street";
+       fhir:index 0
+     ], [
+       fhir:value "Line 2";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Bedford" ];
+     fhir:Address.district [ fhir:value "Middlesex" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01730" ];
+     fhir:Address.country [ fhir:value "United States" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05> a fhir:DocumentReference;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bafe16b9-8b50-47e1-829a-a7dbafb45e05"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-08-18T14:05:00.835+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#8iRGOaZ9QyOQtkXP" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: urn:uuid:bafe16b9-8b50-47e1-829a-a7dbafb45e05</p><p><b>status</b>: current</p><p><b>type</b>: <span title=\"Codes: {http://loinc.org 64297-5}\">Death certificate</span></p><p><b>subject</b>: <a href=\"Patient-51b806c8-566f-463e-8783-9fbf6be8161d.html\">Generated Summary: Social Beneficiary Identifier: 123456789; Example Something Middle Last (OFFICIAL), FirstNameAlias MiddleAlias LastNameAlias (NICKNAME); gender: male; birthDate: 1940-02-19; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></a></p><p><b>date</b>: Dec 23, 2005, 10:43:41 PM</p><p><b>author</b>: <a href=\"Organization-1a110397-936f-4be4-ab10-2caed226569d.html\">Generated Summary: id: 1010101; active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: Example Hospital</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+  ];
+  fhir:DocumentReference.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:bafe16b9-8b50-47e1-829a-a7dbafb45e05" ]
+  ];
+  fhir:DocumentReference.status [ fhir:value "current"];
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:64297-5;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "64297-5" ];
+       fhir:Coding.display [ fhir:value "Death certificate" ]
+     ]
+  ];
+  fhir:DocumentReference.subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d>;
+     fhir:Reference.reference [ fhir:value "Patient/51b806c8-566f-463e-8783-9fbf6be8161d" ]
+  ];
+  fhir:DocumentReference.date [ fhir:value "2005-12-24T09:43:41+11:00"^^xsd:dateTime];
+  fhir:DocumentReference.author [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/vrdr/Organization/1a110397-936f-4be4-ab10-2caed226569d>;
+     fhir:Reference.reference [ fhir:value "Organization/1a110397-936f-4be4-ab10-2caed226569d" ]
+  ];
+  fhir:DocumentReference.content [
+     fhir:index 0;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.url [ fhir:value "urn:uuid:7a4613cc-b306-49b2-a428-9f8e67e67a85" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/vrdr/Patient/51b806c8-566f-463e-8783-9fbf6be8161d> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Organization/1a110397-936f-4be4-ab10-2caed226569d> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/vrdr/DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05.ttl> .
+
+# -------------------------------------------------------------------------------------
+
