@@ -5,23 +5,16 @@ Title: "VRDR Injury Incident"
 * ^meta.versionId = "23"
 * ^meta.lastUpdated = "2020-08-17T16:17:34.702+00:00"
 * ^meta.source = "#MuquB0uvBh8BkWDP"
-* ^version = "1.0.0"
 * ^experimental = false
 * ^date = "2020-05-10"
-* ^publisher = "Health Level Seven International"
-* ^contact[0].name = "HL7 International - Public Health"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "http://www.hl7.org/Special/committees/pher"
-* ^contact[1].name = "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
-* ^contact[2].name = "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction[0].text = "US Realm"
+* ^publisher = "Health Level Seven"
 * extension ..*
-* extension ^slicing.discriminator[0].type = #value
-* extension ^slicing.discriminator[0].path = "Observation.extension.url"
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "Observation.extension.url"
 * extension ^slicing.rules = #open
-* extension contains ObservationLocation named injuryLocation 0..1
+* extension contains injuryLocation 0..1
 * extension[injuryLocation].url 1..1
+* extension[injuryLocation].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location" (exactly)
 * extension[injuryLocation].value[x] only Reference(InjuryLocation)
 * status 1..1
 * status = #final (exactly)
@@ -34,8 +27,8 @@ Title: "VRDR Injury Incident"
 * value[x] 1..1
 * value[x] only dateTime or string
 * component ..3
-* component ^slicing.discriminator[0].type = #value
-* component ^slicing.discriminator[0].path = "code"
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
     placeOfInjury 1..1 and
@@ -74,9 +67,9 @@ Usage: #example
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * effectiveDateTime = "2018-02-19T16:48:06-05:00"
 * valueDateTime = "2018-02-19T16:48:06-05:00"
-* component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work"
-* component[workInjuryIndicator].valueCodeableConcept = $v2-0136#N "No"
-* component[transportationEventIndicator].code = $loinc#69448-9 "Injury leading to death associated with transportation event"
-* component[transportationEventIndicator].valueCodeableConcept = $v2-0136#N "No"
-* component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility"
-* component[placeOfInjury].valueCodeableConcept.text = "Home"
+* component[0].code = $loinc#69444-8 "Did death result from injury at work"
+* component[=].valueCodeableConcept = $v2-0136#N "No"
+* component[+].code = $loinc#69448-9 "Injury leading to death associated with transportation event"
+* component[=].valueCodeableConcept = $v2-0136#N "No"
+* component[+].code = $loinc#69450-5 "Place of injury Facility"
+* component[=].valueCodeableConcept.text = "Home"

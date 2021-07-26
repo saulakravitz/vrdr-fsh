@@ -5,17 +5,13 @@ Title: "VRDR Autopsy Performed Indicator"
 * ^meta.versionId = "28"
 * ^meta.lastUpdated = "2020-06-10T22:41:15.876+00:00"
 * ^meta.source = "#jU7oMgwSEIRspNcr"
-* ^version = "1.0.0"
+* ^version = "1.0"
 * ^status = #draft
-* ^date = "2021-04-07T19:28:04+00:00"
-* ^publisher = "Health Level Seven International"
-* ^contact[0].name = "HL7 International - Public Health"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "http://www.hl7.org/Special/committees/pher"
-* ^contact[1].name = "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
-* ^contact[2].name = "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction[0].text = "US Realm"
+* ^publisher = "Hi3 Solutions"
+* ^contact.name = "AbdulMalik Shakir"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
+* ^contact.telecom.use = #work
 * status 1..1
 * status only code
 * status = #final (exactly)
@@ -33,8 +29,8 @@ Title: "VRDR Autopsy Performed Indicator"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from $ViewValueSet.action_1 (required)
-* value[x] ^slicing.discriminator[0].type = #type
-* value[x] ^slicing.discriminator[0].path = "$this"
+* value[x] ^slicing.discriminator.type = #type
+* value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #open
 * value[x] ^short = "value[x]"
 * value[x] ^definition = "SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-409)"
@@ -51,8 +47,8 @@ Title: "VRDR Autopsy Performed Indicator"
 * component.value[x] 1..1
 * component.value[x] only CodeableConcept
 * component.value[x] from $ViewValueSet.action_1 (required)
-* component.value[x] ^slicing.discriminator[0].type = #type
-* component.value[x] ^slicing.discriminator[0].path = "$this"
+* component.value[x] ^slicing.discriminator.type = #type
+* component.value[x] ^slicing.discriminator.path = "$this"
 * component.value[x] ^slicing.rules = #open
 * component.value[x] ^short = "value[x]"
 * component.value[x] ^definition = "This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-415)"
@@ -70,5 +66,5 @@ Usage: #example
 * code = $loinc#85699-7 "Autopsy was performed"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * valueCodeableConcept = $v2-0136#Y "Yes"
-* component[0].code = $loinc#69436-4 "Autopsy results available"
-* component[0].valueCodeableConcept = $v2-0136#Y "Yes"
+* component.code = $loinc#69436-4 "Autopsy results available"
+* component.valueCodeableConcept = $v2-0136#Y "Yes"

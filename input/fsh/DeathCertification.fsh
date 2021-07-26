@@ -5,18 +5,18 @@ Title: "VRDR Death Certification"
 * ^meta.versionId = "17"
 * ^meta.lastUpdated = "2020-07-12T20:36:37.886+00:00"
 * ^meta.source = "#xWRkuQqK3Rm1PUtv"
-* ^version = "1.0.0"
+* ^version = "1.0"
 * ^status = #draft
 * ^experimental = false
 * ^date = "2020-05-09"
-* ^publisher = "Health Level Seven International"
-* ^contact[0].name = "HL7 International - Public Health"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "http://www.hl7.org/Special/committees/pher"
-* ^contact[1].name = "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
-* ^contact[2].name = "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction[0].text = "US Realm"
+* ^publisher = "Health Level Seven"
+* ^contact.name = "AbdulMalik Shakir"
+* ^contact.telecom[0].system = #phone
+* ^contact.telecom[=].value = "6266444491"
+* ^contact.telecom[=].use = #work
+* ^contact.telecom[+].system = #email
+* ^contact.telecom[=].value = "abdulmalik.shakir@hi3solutions.com"
+* ^contact.telecom[=].use = #work
 * identifier 1..*
 * status 1..1
 * status only code
@@ -48,11 +48,11 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2020-07-21T01:43:10.674+00:00"
 * meta.source = "#8k18Qj8mbpzIKsUn"
-* identifier[0].value = "aabcde9876543210"
+* identifier.value = "aabcde9876543210"
 * status = #completed
 * category = $sct#103693007 "Diagnostic procedure"
 * code = $sct#308646001 "Death certification"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * performedDateTime = "2019-01-29T16:48:06-05:00"
-* performer[0].function = $sct#309343006 "Physician"
-* performer[0].actor.reference = "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
+* performer.function = $sct#309343006 "Physician"
+* performer.actor.reference = "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"

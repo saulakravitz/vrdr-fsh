@@ -5,18 +5,14 @@ Title: "Decedent Military Service"
 * ^meta.versionId = "13"
 * ^meta.lastUpdated = "2020-07-23T13:20:16.090+00:00"
 * ^meta.source = "#bRGT00bfET49wt1d"
-* ^version = "1.0.0"
+* ^version = "1.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-04-07T19:28:04+00:00"
-* ^publisher = "Health Level Seven International"
-* ^contact[0].name = "HL7 International - Public Health"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "http://www.hl7.org/Special/committees/pher"
-* ^contact[1].name = "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
-* ^contact[2].name = "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction[0].text = "US Realm"
+* ^publisher = "HL7 PHWG"
+* ^contact.name = "AbdulMalik Shakir"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
+* ^contact.telecom.use = #work
 * status 1..1
 * status only code
 * status = #final (exactly)

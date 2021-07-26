@@ -10,7 +10,6 @@ Alias: $ViewValueSet.action = https://phinvads.cdc.gov/vads/ViewValueSet.action?
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $security = https://trifolia-fhir.lantanagroup.com/security
-Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $ViewValueSet.action_1 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7486
 Alias: $ViewValueSet.action_2 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.3593
 Alias: $ViewValueSet.action_3 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6001
@@ -25,5 +24,6 @@ Alias: $ViewValueSet.action_11 = https://phinvads.cdc.gov/vads/ViewValueSet.acti
 Alias: $v3-ServiceDeliveryLocationRoleType = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
 Alias: $ViewValueSet.action_12 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7374
 Alias: $ViewValueSet.action_13 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6002
-Alias: $ViewValueSet.action_14 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6004
-Alias: $ViewValueSet.action_15 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
+Alias: $ViewValueSet.action_14 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#
+Alias: $ViewValueSet.action_15 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6004
+Alias: $ViewValueSet.action_16 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
