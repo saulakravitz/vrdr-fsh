@@ -36,3 +36,4 @@ Alias: $ViewValueSet.action_15 = https://phinvads.cdc.gov/vads/ViewValueSet.acti
 Alias: $ViewValueSet.action_16 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C
 Alias: $ViewValueSet.action_17 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380
 Alias: $ViewValueSet.action_18 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018
+Alias: $PH_PlaceOfOccurrence_ICD_10_WHO = urn:oid:2.16.840.1.114222.4.5.320

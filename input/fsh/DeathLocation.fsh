@@ -52,3 +52,4 @@ Usage: #example
 * address.state = "MA"
 * address.postalCode = "01730"
 * address.country = "United States"
+* extension[nationalReportingJurisdictionId].value[x] = urn:oid:2.16.840.1.113883.6.92#MA "Massachusets"

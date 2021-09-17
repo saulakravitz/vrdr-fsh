@@ -44,7 +44,7 @@ Usage: #example
 * meta.lastUpdated = "2020-07-21T04:48:02.057+00:00"
 * meta.source = "#lMNehUUKrIGcu4us"
 * category.coding.system.value = "http://snomed.info/sct"
-* category.coding.code.value = 16100001
+* category.coding.code.value = "16100001"
 * category.coding.display.value = "Death diagnosis"
 * code.text = "Example Contributing Conditions"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"

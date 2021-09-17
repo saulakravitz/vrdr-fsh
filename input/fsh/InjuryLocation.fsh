@@ -44,5 +44,5 @@ Usage: #example
 * address.state = "MA"
 * address.postalCode = "01730"
 * address.country = "US"
-* position.longitude = "38.8951"
-* position.latitude = "77.0364"
+* position.longitude = 38.8951
+* position.latitude = 77.0364
