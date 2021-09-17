@@ -87,8 +87,6 @@ Description: "Date Component Absent Reason"
 Extension: InjuryLocationReference
 Id: Injury-Location-Reference
 Title: "Injury Location Reference"
-* url 1..1
-* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Injury-Location-Reference" (exactly)
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(InjuryLocation)
@@ -97,8 +95,6 @@ Title: "Injury Location Reference"
 Extension: DeathLocationReference
 Id: Death-Location-Reference
 Title: "Death Location Reference"
-* url 1..1
-* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Death-Location-Reference" (exactly)
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(DeathLocation)
@@ -106,8 +102,14 @@ Title: "Death Location Reference"
 Extension: DispositionLocationReference
 Id: Disposition-Location-Reference
 Title: "Disposition Location Reference"
-* url 1..1
-* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Disposition-Location-Reference" (exactly)
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(DispositionLocation)
+
+Extension: PatientbirthPlace
+Id: Patient-birthPlace
+Title: "Patient BirthPlace"
+* value[x] only Address
+* value[x].country 0..1
+* value[x].country from $ViewValueSet.action_14 (required)
+* value[x].country ^binding.description = "PHVS_DecedentBirthplace_Country"

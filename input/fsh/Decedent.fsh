@@ -20,12 +20,7 @@ Title: "VRDR Decedent"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
 * ^contact.telecom.use = #work
-* extension contains $patient-birthPlace named patient-birthPlace 0..1
-* extension[patient-birthPlace] ^short = "Extension"
-* extension[patient-birthPlace].value[x] only Address
-* extension[patient-birthPlace].value[x].country 0..1
-* extension[patient-birthPlace].value[x].country from $ViewValueSet.action_14 (required)
-* extension[patient-birthPlace].value[x].country ^binding.description = "PHVS_DecedentBirthplace_Country"
+* extension contains PatientbirthPlace named patient-birthPlace 0..1
 * identifier 1..* MS
 * name 1..* MS
 * gender 1..1
