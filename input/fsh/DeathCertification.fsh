@@ -35,7 +35,7 @@ Title: "VRDR Death Certification"
 * performed[x] ^short = "certificationDatetime"
 * performer 1..1
 * performer.function 1..1
-* performer.function from $ViewValueSet.action_3 (required)
+* performer.function from $ViewValueSet.action_4 (required)
 * performer.function ^binding.description = "PHVS_CertifierTypes_NCHS"
 * performer.actor 1..1
 * performer.actor only Reference(VRDR_Certifier)

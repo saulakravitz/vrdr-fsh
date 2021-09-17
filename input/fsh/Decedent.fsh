@@ -2,9 +2,16 @@ Profile: Decedent
 Parent: USCorePatientProfile
 Id: VRDR-Decedent
 Title: "VRDR Decedent"
-* ^meta.versionId = "84"
-* ^meta.lastUpdated = "2020-08-17T01:34:52.818+00:00"
-* ^meta.source = "#znJwDaDCFknl4UOR"
+* ^meta.versionId = "90"
+* ^meta.lastUpdated = "2021-08-09T06:00:13.203+00:00"
+* ^meta.source = "#uyXAEWQu3pNMx6UB"
+* ^meta.security[0] = $security#user^PNgAbFNH^write
+* ^meta.security[+] = $security#user^PNgAbFNH^read
+* ^meta.security[+] = $security#user^dMG-NXHH^read
+* ^meta.security[+] = $security#everyone^read
+* ^meta.security[+] = $security#user^TKWZUCCU^read
+* ^meta.security[+] = $security#user^dMG-NXHH^write
+* ^meta.security[+] = $security#everyone^write
 * ^version = "1.0"
 * ^experimental = false
 * ^date = "2020-05-09"
@@ -13,57 +20,36 @@ Title: "VRDR Decedent"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
 * ^contact.telecom.use = #work
-* extension contains patient-birthPlace 0..1
-* extension[patient-birthPlace] only Extension
+* extension contains $patient-birthPlace named patient-birthPlace 0..1
+* extension[patient-birthPlace] ^short = "Extension"
+* extension[patient-birthPlace].value[x] only Address
+* extension[patient-birthPlace].value[x].country 0..1
+* extension[patient-birthPlace].value[x].country from $ViewValueSet.action_14 (required)
+* extension[patient-birthPlace].value[x].country ^binding.description = "PHVS_DecedentBirthplace_Country"
 * identifier 1..* MS
 * name 1..* MS
 * gender 1..1
-* gender from $ViewValueSet.action_9 (required)
+* gender from $ViewValueSet.action_15 (required)
 * gender ^definition = "The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant."
 * gender ^comment = "This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. \n\nThis element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as \"must support\". Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown."
 * gender ^binding.description = "PHVS_Sex_MFU"
-* birthDate 1..1
-* birthDate.extension contains ExtensionDatePartAbsentReason named datePartAbsentReason 0..* MS
-* birthDate.extension[datePartAbsentReason] obeys ele-1 and ext-1
-* birthDate.extension[datePartAbsentReason] ^short = "Indicates reason for missing one or more parts of the decedent's birthdate."
-* birthDate.extension[datePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's birthdate."
-* birthDate.extension[datePartAbsentReason] ^base.path = "Element.extension"
-* birthDate.extension[datePartAbsentReason] ^base.min = 0
-* birthDate.extension[datePartAbsentReason] ^base.max = "*"
-* birthDate.extension[datePartAbsentReason] ^condition = "ele-1"
-// WARNING: The constraint index in the following rule (e.g., constraint[0]) may be incorrect.
-// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
-* birthDate.extension[datePartAbsentReason] ^constraint[0].source = "http://hl7.org/fhir/StructureDefinition/Element"
-// WARNING: The constraint index in the following rule (e.g., constraint[1]) may be incorrect.
-// Please compare with the constraint array in the original definition's snapshot and adjust as necessary.
-* birthDate.extension[datePartAbsentReason] ^constraint[+].source = "http://hl7.org/fhir/StructureDefinition/Extension"
-* birthDate.extension[datePartAbsentReason] ^isModifier = false
-* birthDate.value 0..1
-* birthDate.value only date
-* birthDate.value ^representation = #xmlAttr
-* birthDate.value ^short = "Primitive value for date"
-* birthDate.value ^definition = "The actual value"
-* birthDate.value ^base.path = "date.value"
-* birthDate.value ^base.min = 0
-* birthDate.value ^base.max = "1"
-* birthDate.value ^type.extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type"
-* birthDate.value ^type.extension[=].valueUrl = "date"
-* birthDate.value ^type.extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
-* birthDate.value ^type.extension[=].valueString = "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?"
-* birthDate.value ^isModifier = false
-* birthDate.value ^isSummary = false
+* birthDate 0..1
+* birthDate.extension contains ExtensionPartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS
+* birthDate.extension[partialDatePartAbsentReason] ^short = "partialDatePartAbsentReason"
+* birthDate.extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's birthdate."
 * address 0..*
 * address.extension 0..1
 * address.extension only Within_City_Limits_Indicator
-* address.city ^comment = "The city portion of the decedent's resident address shall be expressed as a five-digit numeric value greater than zero and less than 100,000."
-* address.city ^constraint = undefined
+* address.country 0..1
+* address.country from $ViewValueSet.action_16 (required)
+* address.country ^binding.description = "PHVS_DecedentResident_Country"
 * maritalStatus 0..1
 * maritalStatus only CodeableConcept
-* maritalStatus from $ViewValueSet.action_10 (required)
+* maritalStatus from $ViewValueSet.action_17 (required)
 * maritalStatus ^binding.description = "PHVS_MaritalStatus_NCHS"
 * contact.relationship 0..1
 * contact.relationship only CodeableConcept
-* contact.relationship from $ViewValueSet.action_11 (required)
+* contact.relationship from $ViewValueSet.action_18 (required)
 * contact.relationship ^binding.description = "PHVS_RelatedPersonRelationshipType_NCHS"
 
 Instance: 51b806c8-566f-463e-8783-9fbf6be8161d
@@ -74,8 +60,7 @@ Usage: #example
 * meta.versionId = "4"
 * meta.lastUpdated = "2020-07-22T19:41:31.297+00:00"
 * meta.source = "#EoJNRyx11BYIT5J6"
-* extension[0].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-* extension[=].extension[0].url = "ombCategory"
+* extension[0].extension[0].url = "ombCategory"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
 * extension[=].extension[+].url = "ombCategory"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1002-5 "American Indian or Alaska Native"
@@ -87,8 +72,8 @@ Usage: #example
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2036-2 "Filipino"
 * extension[=].extension[+].url = "text"
 * extension[=].extension[=].valueString = "Mixed"
-* extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-* extension[=].extension[0].url = "ombCategory"
+* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+* extension[+].extension[0].url = "ombCategory"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
 * extension[=].extension[+].url = "detailed"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2184-0 "Dominican"
@@ -96,6 +81,7 @@ Usage: #example
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2148-5 "Mexican"
 * extension[=].extension[+].url = "text"
 * extension[=].extension[=].valueString = "Hispanic or Latino"
+* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
 * extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
 * extension[=].valueCode = #F
 * identifier.type = $v2-0203#SB "Social Beneficiary Identifier"
@@ -113,7 +99,13 @@ Usage: #example
 * name[=].given[+] = "MiddleAlias"
 * name[=].suffix = "Jr."
 * gender = #male
-* birthDate = "1940-02-19"
+* birthDate.extension.extension[0].url = "year-absent-reason"
+* birthDate.extension.extension[=].valueCode = #asked-unknown
+* birthDate.extension.extension[+].url = "date-month"
+* birthDate.extension.extension[=].valueInteger = 2
+* birthDate.extension.extension[+].url = "date-day"
+* birthDate.extension.extension[=].valueInteger = 24
+* birthDate.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason"
 * address.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"
 * address.extension.valueCoding = $v2-0136#N "No"
 * address.line[0] = "101 Example Street"
@@ -124,15 +116,3 @@ Usage: #example
 * address.postalCode = "01730"
 * address.country = "United States"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
-
-Invariant: ele-1
-Description: "All FHIR elements must have a @value or children"
-Severity: #error
-Expression: "hasValue() or (children().count() > id.count())"
-XPath: "@value|f:*|h:div"
-
-Invariant: ext-1
-Description: "Must have either extensions or value[x], not both"
-Severity: #error
-Expression: "extension.exists() != value.exists()"
-XPath: "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"

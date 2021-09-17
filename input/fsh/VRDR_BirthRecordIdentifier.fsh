@@ -47,4 +47,4 @@ Usage: #example
 * status = #final
 * code = $v2-0203#BR "Birth registry number"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
-* valueString = "4242123"
+* dataAbsentReason = $data-absent-reason#unknown "Unknown"

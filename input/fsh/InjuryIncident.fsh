@@ -38,13 +38,13 @@ Title: "VRDR Injury Incident"
 * component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility" (exactly)
 * component[placeOfInjury].value[x] 1..1
 * component[placeOfInjury].value[x] only CodeableConcept
-* component[placeOfInjury].value[x] from $ViewValueSet.action_12 (required)
+* component[placeOfInjury].value[x] from $ViewValueSet.action_9 (required)
 * component[placeOfInjury].value[x] ^binding.description = "PHVS_PlaceOfInjury_NCHS"
 * component[workInjuryIndicator].code 1..1
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work" (exactly)
 * component[workInjuryIndicator].value[x] 1..1
 * component[workInjuryIndicator].value[x] only CodeableConcept
-* component[workInjuryIndicator].value[x] from $ViewValueSet.action_1 (required)
+* component[workInjuryIndicator].value[x] from $ViewValueSet.action_2 (required)
 * component[workInjuryIndicator].value[x] ^short = "valueCodeableConcept"
 * component[workInjuryIndicator].value[x] ^binding.description = "PHVS_YesNoNotApplicable_NCHS"
 * component[transportationEventIndicator].code 1..1

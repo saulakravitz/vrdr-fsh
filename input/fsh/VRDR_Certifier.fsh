@@ -23,9 +23,9 @@ Title: "VRDR Certifier"
 * name 1..1
 * name ^short = "name"
 * name ^definition = "SHALL contain exactly one [1..1] name (CONF:4393-303)."
-* address 1..1
+* address 0..1
 * address ^short = "address"
-* address ^definition = "SHALL contain exactly one [1..1] address (CONF:4393-302)."
+* address ^definition = "SHALL contain zero or one [0..1] address (CONF:4393-302)."
 * qualification 1..1
 * qualification only BackboneElement
 * qualification ^short = "qualification"
@@ -34,7 +34,7 @@ Title: "VRDR Certifier"
 * qualification.identifier ^short = "identifier"
 * qualification.identifier ^definition = "This qualification SHALL contain exactly one [1..1] identifier (CONF:4393-305)."
 * qualification.code 1..1
-* qualification.code from $ViewValueSet.action_3 (required)
+* qualification.code from $ViewValueSet.action_4 (required)
 * qualification.code ^binding.description = "Identifier Type Codes"
 
 Instance: cb1219bc-785f-431c-9f56-b8fbbe78bc4d

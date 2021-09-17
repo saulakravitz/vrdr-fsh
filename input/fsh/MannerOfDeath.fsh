@@ -33,7 +33,7 @@ Title: "VRDR Manner of Death"
 * performer ^short = "performer"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $ViewValueSet.action_13 (required)
+* value[x] from $ViewValueSet.action_10 (required)
 * value[x] ^binding.description = "PHVS_MannerOfDeath_NCHS"
 
 Instance: d7c2e459-c7ca-415c-a38c-f78a0f0c5813

@@ -1,88 +1,3 @@
-Extension: ExtensionDatePartAbsentReason
-Id: Extension-date-part-absent-reason
-Title: "Extension - Date Part Absent Reason"
-Description: "Provides a reason why an expected date part is missing."
-* ^meta.versionId = "10"
-* ^meta.lastUpdated = "2021-05-05T07:28:27.952+00:00"
-* ^meta.source = "#yE5VLP9LhHX2gryZ"
-* ^url = "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-date-part-absent-reason"
-* ^version = "0.1.0"
-* ^date = "2021-07-14T20:35:01+00:00"
-* ^publisher = "HL7 International - Public Health Work Group"
-* ^contact.name = "HL7 International - Public Health"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
-* ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction.text = "United States of America"
-* ^context[0].type = #element
-* ^context[=].expression = "date"
-* ^context[+].type = #element
-* ^context[=].expression = "dateTime"
-* . 0..*
-* . ^short = "unknown | asked | temp | notasked | masked | unsupported | astext | error"
-* . ^definition = "Provides a reason why the expected date part is missing."
-* extension contains
-    date-part 1..1 and
-    absent-reason 1..1
-* extension[date-part] only Extension
-* extension[date-part] ^short = "Date part"
-* extension[date-part] ^definition = "Date part for which there is a reason for missing data"
-* extension[date-part].url only uri
-* extension[date-part].value[x] 1..
-* extension[date-part].value[x] only CodeableConcept
-* extension[date-part].value[x] from ValueSetDatePart (required)
-* extension[date-part].value[x] ^short = "Specifies the date part that is missing data"
-* extension[date-part].value[x] ^binding.description = "ValueSetDatePart"
-* extension[absent-reason] only Extension
-* extension[absent-reason] ^short = "Date part absent reason"
-* extension[absent-reason] ^definition = "The reason the specific date part is missing."
-* extension[absent-reason].url only uri
-* extension[absent-reason].value[x] 1..
-* extension[absent-reason].value[x] only code
-* extension[absent-reason].value[x] from http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1 (required)
-* extension[absent-reason].value[x] ^label = "Used to specify why the normally expected content of the date-part element is missing."
-* extension[absent-reason].value[x] ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* extension[absent-reason].value[x] ^binding.extension[=].valueString = "DataAbsentReason"
-* extension[absent-reason].value[x] ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"
-* extension[absent-reason].value[x] ^binding.extension[=].valueBoolean = true
-* extension[absent-reason].value[x] ^binding.description = "DataAbsentReason"
-* url = "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-date-part-absent-reason" (exactly)
-
-Extension: LocationJurisdictionId
-Id: Location-Jurisdiction-Id
-Title: "Location Jurisdiction Id"
-* ^meta.versionId = "6"
-* ^meta.lastUpdated = "2020-10-23T21:59:46.639+00:00"
-* ^meta.source = "#S4UJik7apd2owgyl"
-* ^meta.security[0] = $security#everyone^read
-* ^meta.security[+] = $security#user^dMG-NXHH^write
-* ^meta.security[+] = $security#user^TKWZUCCU^read
-* ^meta.security[+] = $security#user^dMG-NXHH^read
-* ^meta.security[+] = $security#user^PNgAbFNH^read
-* ^meta.security[+] = $security#user^PNgAbFNH^write
-* ^kind = #resource
-* ^context.type = #extension
-* ^context.expression = "Location"
-* url 1..1
-* value[x] 1..1
-* value[x] only CodeableConcept
-* value[x] from $ViewValueSet.action_16 (required)
-* value[x] ^binding.description = "PHVS_USVitalRecordsJurisdictions_NCHS"
-
-Extension: ObservationLocation
-Id: Observation-Location
-Title: "Observation Location"
-Description: "The location of the observed phenomenon or entity that is the subject of the observation."
-* ^meta.versionId = "8"
-* ^meta.lastUpdated = "2020-08-17T02:50:36.574+00:00"
-* ^meta.source = "#KMOI4nvtMFmvU3lz"
-* ^kind = #resource
-* ^context.type = #extension
-* ^context.expression = "Observation"
-* value[x] 1..1
-* value[x] only Reference
-* value[x] ^definition = "Reference to a Location resource."
-
 Extension: Within_City_Limits_Indicator
 Id: Within-City-Limits-Indicator
 Title: "VRDR Within City Limits Indicator"
@@ -105,5 +20,99 @@ Description: "Used to indicate whether or not an address is within city limits. 
 * ^context.expression = "Address"
 * value[x] 1..1
 * value[x] only Coding
-* value[x] from $ViewValueSet.action_1 (required)
+* value[x] from $ViewValueSet.action_2 (required)
 * value[x] ^binding.description = "PHVS_YesNoUnknown_CDC"
+
+Extension: ExtensionPartialDatePartAbsentReason
+Id: VRDR-Partial-date-part-absent-reason
+Title: "Extension - Partial Date Part Absent Reason"
+Description: "Provides values of a partial date along with the reason one or more expected date part is missing."
+* ^meta.versionId = "4"
+* ^meta.lastUpdated = "2021-08-09T06:48:49.451+00:00"
+* ^meta.source = "#83d0qyyAShJvOTBk"
+* ^version = "0.1.0"
+* ^date = "2021-08-05"
+* ^publisher = "HL7 International - Public Health Work Group"
+* ^contact.name = "HL7 International - Public Health"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
+* ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
+* ^jurisdiction.text = "United States of America"
+* ^context[0].type = #element
+* ^context[=].expression = "date"
+* ^context[+].type = #element
+* ^context[=].expression = "dateTime"
+* . 0..*
+* . ^short = "Partial Date"
+* . ^definition = "Provides a partial date and the reason one or more expected date part is missing."
+* extension contains
+    date-year 0..1 and
+    date-year-absent-reason 0..1 and
+    date-month 0..1 and
+    date-month-absent-reason 0..1 and
+    date-day 0..1 and
+    date-month-absent-reason 0..1
+* extension[date-year] only Extension
+* extension[date-year] ^short = "Date Year"
+* extension[date-year] ^definition = "The year portion (YYYY) of the partial date."
+* extension[date-year].url only uri
+* extension[date-year].value[x] 1..
+* extension[date-year].value[x] only integer
+* extension[date-year].value[x] ^definition = "Specifies the year portion of a partial date"
+* extension[date-year].value[x] ^maxLength = 4
+* extension[date-year-absent-reason] only Extension
+* extension[date-year-absent-reason] ^short = "Date year absent reason"
+* extension[date-year-absent-reason] ^definition = "The reason the year portion of a partial date is missing."
+* extension[date-year-absent-reason].url only uri
+* extension[date-year-absent-reason].url = "year-absent-reason" (exactly)
+* extension[date-year-absent-reason].value[x] 1..
+* extension[date-year-absent-reason].value[x] only code
+* extension[date-year-absent-reason].value[x] from http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1 (required)
+* extension[date-year-absent-reason].value[x] ^label = "Used to specify why the year portion of a partial date is missing."
+* extension[date-year-absent-reason].value[x] ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+* extension[date-year-absent-reason].value[x] ^binding.extension.valueString = "DataAbsentReason"
+* extension[date-year-absent-reason].value[x] ^binding.description = "data-absent-reason"
+* extension[date-month] only Extension
+* extension[date-month] ^short = "Date Month"
+* extension[date-month] ^definition = "The month portion (MM) of the partial date."
+* extension[date-month].url only uri
+* extension[date-month].value[x] 1..
+* extension[date-month].value[x] only integer
+* extension[date-month].value[x] ^definition = "Specifies the month portion of a partial date"
+* extension[date-month].value[x] ^minValueInteger = 1
+* extension[date-month].value[x] ^maxValueInteger = 12
+* extension[date-month].value[x] ^maxLength = 2
+* extension[date-month-absent-reason] only Extension
+* extension[date-month-absent-reason] ^short = "Date month absent reason"
+* extension[date-month-absent-reason] ^definition = "The reason the month portion of a partial date is missing."
+* extension[date-month-absent-reason].url only uri
+* extension[date-month-absent-reason].url = "month-absent-reason" (exactly)
+* extension[date-month-absent-reason].value[x] 1..
+* extension[date-month-absent-reason].value[x] only code
+* extension[date-month-absent-reason].value[x] from http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1 (required)
+* extension[date-month-absent-reason].value[x] ^label = "Used to specify why the month portion of a partial date is missing."
+* extension[date-month-absent-reason].value[x] ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+* extension[date-month-absent-reason].value[x] ^binding.extension.valueString = "DataAbsentReason"
+* extension[date-month-absent-reason].value[x] ^binding.description = "data-absent-reason"
+* extension[date-day] only Extension
+* extension[date-day] ^short = "Date Day"
+* extension[date-day] ^definition = "The day portion (DD) of the partial date."
+* extension[date-day].url only uri
+* extension[date-day].value[x] 1..
+* extension[date-day].value[x] only integer
+* extension[date-day].value[x] ^definition = "Specifies the day portion of a partial date."
+* extension[date-day].value[x] ^minValueInteger = 1
+* extension[date-day].value[x] ^maxValueInteger = 31
+* extension[date-day].value[x] ^maxLength = 2
+* extension[date-month-absent-reason] only Extension
+* extension[date-month-absent-reason] ^short = "Date day absent reason"
+* extension[date-month-absent-reason] ^definition = "The reason the day portion of a partial date is missing."
+* extension[date-day-absent-reason].url only uri
+* extension[date-day-absent-reason].url = "day-absent-reason" (exactly)
+* extension[date-day-absent-reason].value[x] 1..
+* extension[date-day-absent-reason].value[x] only code
+* extension[date-day-absent-reason].value[x] from http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1 (required)
+* extension[date-day-absent-reason].value[x] ^label = "Used to specify why the day portion of a partial date is missing."
+* extension[date-day-absent-reason].value[x] ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+* extension[date-day-absent-reason].value[x] ^binding.extension.valueString = "DataAbsentReason"
+* extension[date-day-absent-reason].value[x] ^binding.description = "data-absent-reason"

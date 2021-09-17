@@ -21,4 +21,5 @@ Usage: #example
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * effectivePeriod.start = "1920-01-07"
 * effectivePeriod.end = "2018-02-19"
+* valueCodeableConcept = $ViewCodeSystem.action#1010 "Computer programmers"
 * component.code = $loinc#21844-6 "History of Usual industry"

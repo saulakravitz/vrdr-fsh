@@ -8,7 +8,7 @@ Description: "The national jurisdiction reporting a death event to the National 
 * ^meta.source = "#kNSOkpxSogjCxdh1"
 * identifier 1..1
 * identifier.value 1..1
-* identifier.value from $ViewValueSet.action_14 (required)
+* identifier.value from $ViewValueSet.action_11 (required)
 * identifier.value ^label = "National Reporting Jurisdiction"
 * identifier.value ^short = "National Reporting Jurisdiction"
 * identifier.value ^binding.description = "PHVS_NationalReportingJurisdiction_NND"

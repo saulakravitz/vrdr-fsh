@@ -1,9 +1,7 @@
-[Previous Page - Death Reporting Dataflow](death_reporting_dataflow.html)
-
 The scope of this VRDR FHIR IG is the reporting of incidents of death by State Registrars to the NCHS. The data content of this dataflow contains an aggregation of data collected in preceding dataflows and used in additional dataflows related to the secondary use of death information such as clinical research, law enforcement, and health policy determination. 
 
 <center>
-<table><tr><td><img src="VRDRFHIRIGScope.png" style="width:100%;"/></td></tr></table>
+<table><tr><td><img src="Scope.png" style="width:100%;"/></td></tr></table>
 </center>
 
 While the scope of this IG is limited to death reporting by State Registrars to the NCHS, the FHIR Resource Profiles have been designed with the intent of being reusable in related preceding and antecedent dataflows.
@@ -37,5 +35,3 @@ In this exchange the NVSS sends a copy of the death certificate document it rece
 *** (9) Death certificate document from regional EDRS to death information secondary users.**
 
 In this exchange the regional EDRS send a copy of the final death certificate document to secondary users of death information.
-
-[Next Page - Profiles](profiles.html)

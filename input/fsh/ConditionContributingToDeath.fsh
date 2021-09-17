@@ -29,7 +29,7 @@ Description: "The Condition Contributing to Death profile is used to identify fa
 * code.coding 0..*
 * code.coding.code 1..1
 * code.coding.code only code
-* code.coding.code from $ViewValueSet.action_2 (required)
+* code.coding.code from $ViewValueSet.action_3 (required)
 * code.coding.code ^binding.description = "PHVS_CauseOfDeath_ICD-10_CDC"
 * subject only Reference(Decedent)
 * asserter 1..1

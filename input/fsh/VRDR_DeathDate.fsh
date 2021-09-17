@@ -23,15 +23,15 @@ Title: "VRDR_DeathDate"
 * effective[x] only dateTime
 * performer 0..1
 * performer only Reference(DeathPronouncementPerformer)
-* value[x] 1..1
+* value[x] 0..1
 * value[x] only dateTime
-* value[x].extension contains ExtensionDatePartAbsentReason named datePartAbsentReason 0..* MS
-* value[x].extension[datePartAbsentReason] ^short = "Indicates reason for missing one or more parts of the decedent's death date."
-* value[x].extension[datePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's death date."
-* value[x].extension[datePartAbsentReason] ^base.path = "Element.extension"
-* value[x].extension[datePartAbsentReason] ^base.min = 0
-* value[x].extension[datePartAbsentReason] ^base.max = "*"
-* value[x].extension[datePartAbsentReason] ^isModifier = false
+* value[x].extension contains ExtensionPartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS
+* value[x].extension[partialDatePartAbsentReason] ^short = "Indicates reason for missing one or more parts of the decedent's death date."
+* value[x].extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's death date."
+* value[x].extension[partialDatePartAbsentReason] ^base.path = "Element.extension"
+* value[x].extension[partialDatePartAbsentReason] ^base.min = 0
+* value[x].extension[partialDatePartAbsentReason] ^base.max = "*"
+* value[x].extension[partialDatePartAbsentReason] ^isModifier = false
 * note 0..1
 * method 0..1
 * method = $sct#414135002 "Estimated" (exactly)
@@ -52,8 +52,14 @@ Usage: #example
 * status = #final
 * code = $loinc#81956-5 "Date+time of death"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
-* effectiveDateTime = "2018-02-19T16:48:06-05:00"
+* effectiveDateTime = "2021-02-20T16:48:06-05:00"
 * performer.reference = "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
-* valueDateTime = "2018-02-20T16:48:06-05:00"
+* valueDateTime.extension.extension[0].url = "date-year"
+* valueDateTime.extension.extension[=].valueInteger = 2021
+* valueDateTime.extension.extension[+].url = "date-month"
+* valueDateTime.extension.extension[=].valueInteger = 2
+* valueDateTime.extension.extension[+].url = "day-absent-reason"
+* valueDateTime.extension.extension[=].valueCode = #asked-unknown
+* valueDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason"
 * component.code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]"
-* component.valueDateTime = "2018-02-20T16:48:06-05:00"
+* component.valueDateTime = "2021-02-20T16:48:06-05:00"

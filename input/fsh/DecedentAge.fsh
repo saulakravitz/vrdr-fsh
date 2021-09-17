@@ -51,5 +51,5 @@ Usage: #example
 * code = $loinc#30525-0 "Age"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * effectiveDateTime = "2020-01-02"
-* valueQuantity.value = 79
-* valueQuantity.unit = "a"
+* dataAbsentReason = $data-absent-reason#unknown "Unknown"
+* dataAbsentReason.text = "Unable to determine age at death because of incomplete birthdate and time of death values."

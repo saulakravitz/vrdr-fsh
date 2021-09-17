@@ -1,29 +1,11 @@
-# canonical, fhirVersion, id, name, status, copyrightYear, releaseLabel.
 canonical: http://hl7.org/fhir/us/vrdr
-releaseLabel: vrdr
-id: hl7.fhir.us.vrdr
 fhirVersion: 4.0.1
-FSHOnly: false
+FSHOnly: true
 applyExtensionMetadataToRoot: false
 id: vrdr
 name: VRDR
 status: draft
-version: 1.1.0
+version: 1.2.0
 dependencies:
   hl7.fhir.us.core: 3.1.0
-  hl7.fhir.us.vr-common-library: 0.1.0
   hl7.fhir.us.odh: 1.0.0
-  us.cdc.phinvads: 
-    uri: http://fhir.org/packages/us.cdc.phinvads
-    version: 0.7.0
-jurisdiction: urn:iso:std:iso:3166#US
-license: CC0-1.0
-parameters:
-  show-inherited-invariants: false
-  jira-code: vrdr
-copyrightYear: 2021+
-publisher:
-  name: HL7 Public Health Working Group
-  url: http://www.hl7.org/Special/committees/pher/index.cfm
-  email: pher@lists.HL7.org
-

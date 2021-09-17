@@ -38,4 +38,4 @@ Usage: #example
 * status = #final
 * code = $loinc#55280-2 "Military service Narrative"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
-* valueCodeableConcept = $v2-0136#Y "Yes"
+* valueCodeableConcept = $ViewCodeSystem.action_1#Y "Yes"

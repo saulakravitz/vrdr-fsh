@@ -2,9 +2,9 @@ Profile: DeathLocation
 Parent: USCoreLocation
 Id: VRDR-Death-Location
 Title: "VRDR Death Location"
-* ^meta.versionId = "21"
-* ^meta.lastUpdated = "2020-08-19T07:31:51.017+00:00"
-* ^meta.source = "#V341v7feurVTzlTe"
+* ^meta.versionId = "25"
+* ^meta.lastUpdated = "2021-08-09T06:03:11.654+00:00"
+* ^meta.source = "#LknNyIzX0yovEqKS"
 * ^version = "1.0"
 * ^status = #draft
 * ^experimental = false
@@ -17,21 +17,22 @@ Title: "VRDR Death Location"
 * ^contact.telecom[+].system = #email
 * ^contact.telecom[=].value = "abdulmalik.shakir@hi3solutions.com"
 * ^contact.telecom[=].use = #work
-* extension ..*
+* extension 0..*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains LocationJurisdictionId named nationalReportingJurisdictionId 0..1
+* extension contains LocationJurisdictionId named nationalReportingJurisdictionId 1..1
 * name 1..1
 * name ^short = "name"
 * description 1..1
 * description ^short = "description"
 * type 1..1
-* type from $ViewValueSet.action_4 (required)
+* type from $ViewValueSet.action_13 (required)
 * type ^short = "type"
 * type ^binding.description = "PHVS_PlaceOfDeath_NCHS"
 * address 1..1
 * address ^short = "address"
+* position 0..1
 
 Instance: b7de6056-817f-4d73-9830-ce566accd044
 InstanceOf: DeathLocation

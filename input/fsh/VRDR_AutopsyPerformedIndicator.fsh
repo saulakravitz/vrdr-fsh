@@ -28,7 +28,7 @@ Title: "VRDR Autopsy Performed Indicator"
 * subject ^definition = "SHALL contain exactly one [1..1] subject=\"VRDR Decedent\" (CONF:4393-413)."
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $ViewValueSet.action_1 (required)
+* value[x] from $ViewValueSet.action_2 (required)
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #open
@@ -46,7 +46,7 @@ Title: "VRDR Autopsy Performed Indicator"
 * component.code ^definition = "This component SHALL contain exactly one [1..1] code=\"69436-4\" Autopsy results available  (CONF:4393-416)."
 * component.value[x] 1..1
 * component.value[x] only CodeableConcept
-* component.value[x] from $ViewValueSet.action_1 (required)
+* component.value[x] from $ViewValueSet.action_2 (required)
 * component.value[x] ^slicing.discriminator.type = #type
 * component.value[x] ^slicing.discriminator.path = "$this"
 * component.value[x] ^slicing.rules = #open

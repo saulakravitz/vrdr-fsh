@@ -30,7 +30,7 @@ Title: "VRDR Tobacco Use Contributed To Death"
 * subject ^short = "subject"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $ViewValueSet.action_15 (required)
+* value[x] from $ViewValueSet.action_12 (required)
 * value[x] ^label = "valueCodeableConcept"
 * value[x] ^short = "valueCodeableConcept"
 * value[x] ^alias = "valueCodeableConcept"
@@ -38,7 +38,7 @@ Title: "VRDR Tobacco Use Contributed To Death"
 
 Instance: 4d0ce010-16f1-44f4-bbf8-3a2030e9de99
 InstanceOf: TobaccoUseContributedToDeath
-Title: "Tobacco Use Contributed To Death"
+Title: "Tobacco Use Contributed To Death Example"
 Description: "An instance example of the VRDR-Tobacco-Use-Contributed-To-Death resource profile."
 Usage: #example
 * meta.versionId = "2"

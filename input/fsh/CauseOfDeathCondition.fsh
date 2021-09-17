@@ -6,8 +6,16 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * ^meta.versionId = "14"
 * ^meta.lastUpdated = "2020-07-02T04:43:46.543+00:00"
 * ^meta.source = "#NwabvMXcrlCFwY9G"
-* ^version = "1.0"
+* ^meta.security[0] = $security#user^dMG-NXHH^write
+* ^meta.security[+] = $security#everyone^read
+* ^meta.security[+] = $security#everyone^write
+* ^meta.security[+] = $security#user^PNgAbFNH^write
+* ^meta.security[+] = $security#user^dMG-NXHH^read
+* ^meta.security[+] = $security#user^TKWZUCCU^read
+* ^meta.security[+] = $security#user^PNgAbFNH^read
+* ^meta.tag = $v3-ObservationValue#SUBSETTED "Resource encoded in summary mode"
 * ^status = #draft
+* ^version = "1.0"
 * ^experimental = false
 * ^date = "2020-05-08"
 * ^publisher = "Health Level Seven"
@@ -20,8 +28,6 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * ^contact.telecom[=].use = #work
 * id 0..1
 * id ^short = "id"
-* category 1..1
-* category = $sct#16100001 "Death diagnosis" (exactly)
 * code 1..1
 * code only CodeableConcept
 * code ^label = "CauseOfDeathCondition.code"
@@ -29,7 +35,7 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * code ^comment = "The CauseOfDeathCondition.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component."
 * code.coding 0..*
 * code.coding.code 1..1
-* code.coding.code from $ViewValueSet.action_2 (required)
+* code.coding.code from $ViewValueSet.action_3 (required)
 * code.coding.code ^binding.description = "PHVS_CauseOfDeath_ICD-10_CDC"
 * code.text 0..1
 * subject 1..1

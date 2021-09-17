@@ -26,6 +26,7 @@ Name                                                        Type       File
 9676ae27-2a89-4295-913c-0d6847300a3a                        Instance   DecedentEducationLevel.fsh
 976c548f-9460-42f2-b41e-390b3bee91c8                        Instance   DecedentFather.fsh
 CauseOfDeathCondition                                       Profile    CauseOfDeathCondition.fsh
+CensusTract                                                 Profile    CensusTract.fsh
 ConditionContributingToDeath                                Profile    ConditionContributingToDeath.fsh
 DeathCertificate                                            Profile    DeathCertificate.fsh
 DeathCertificateDocument                                    Profile    DeathCertificateDocument.fsh
@@ -42,8 +43,9 @@ DecedentSpouse                                              Profile    DecedentS
 DecedentTransportationRole                                  Profile    DecedentTransportationRole.fsh
 DispositionLocation                                         Profile    DispositionLocation.fsh
 ExaminerContacted                                           Profile    ExaminerContacted.fsh
-ExtensionDatePartAbsentReason                               Extension  extensions.fsh
+ExtensionPartialDatePartAbsentReason                        Extension  extensions.fsh
 FuneralHome                                                 Profile    FuneralHome.fsh
+FuneralHomeDirector                                         Profile    FuneralHomeDirector.fsh
 FuneralServiceLicensee                                      Profile    FuneralServiceLicensee.fsh
 InjuryIncident                                              Profile    InjuryIncident.fsh
 InjuryLocation                                              Profile    InjuryLocation.fsh
@@ -52,11 +54,11 @@ Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-2  Instance   DeathCert
 Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-3  Instance   DeathCertificateDocument.fsh
 Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-4  Instance   DeathCertificateDocument.fsh
 InterestedParty                                             Profile    InterestedParty.fsh
-LocationJurisdictionId                                      Extension  extensions.fsh
+LocationJurisdictionId                                      Profile    LocationJurisdictionId.fsh
 MannerOfDeath                                               Profile    MannerOfDeath.fsh
 Mortician                                                   Profile    Mortician.fsh
 NationalReportingJurisdiction                               Profile    NationalReportingJurisdiction.fsh
-ObservationLocation                                         Extension  extensions.fsh
+ObservationLocation                                         Profile    ObservationLocation.fsh
 TobaccoUseContributedToDeath                                Profile    TobaccoUseContributedToDeath.fsh
 VRDR_AutopsyPerformedIndicator                              Profile    VRDR_AutopsyPerformedIndicator.fsh
 VRDR_BirthRecordIdentifier                                  Profile    VRDR_BirthRecordIdentifier.fsh
@@ -76,6 +78,5 @@ cb1219bc-785f-431c-9f56-b8fbbe78bc4d                        Instance   VRDR_Cert
 d7c2e459-c7ca-415c-a38c-f78a0f0c5813                        Instance   MannerOfDeath.fsh
 d80681ff-9f1d-4915-87b5-eda54534096a                        Instance   VRDR_DecedentDispositionMethod.fsh
 df5a2807-e0b2-4971-9820-efdbbbfcef7b                        Instance   DecedentAge.fsh
-ele-1                                                       Invariant  Decedent.fsh
-ext-1                                                       Invariant  Decedent.fsh
 f0cbc63d-ac4e-469b-8761-70b6ea8bf666                        Instance   CauseOfDeathCondition.fsh
+terminology-settings                                        Instance   instances.fsh
