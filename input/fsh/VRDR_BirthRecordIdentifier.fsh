@@ -28,9 +28,9 @@ Title: "VRDR Birth Record Identifier"
     birthYear 0..1
 * component[birthState].code 1..1
 * component[birthState].code = $loinc#21842-0 "Birthplace" (exactly)
-* component[valu][x]] 1..1
-* component[valu][x]] only CodeableConcept
-* component[valu][x]] ^patternCodeableConcept.coding.system = "urn:iso:std:iso:3166:-2"
+* component[birthState].value[x] 1..1
+* component[birthState].value[x] only CodeableConcept
+* component[birthState].value[x] ^patternCodeableConcept.coding.system = "urn:iso:std:iso:3166:-2"
 * component[birthYear].code = $loinc#80904-6 "Birth year" (exactly)
 * component[birthYear].value[x] 1..1
 * component[birthYear].value[x] only dateTime

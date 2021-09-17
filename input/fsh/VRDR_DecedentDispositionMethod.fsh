@@ -15,10 +15,7 @@ Title: "Decedent Disposition Method"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "Observation.extension"
 * extension ^slicing.rules = #open
-* extension contains dispositionLocation 0..1
-* extension[dispositionLocation].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location" (exactly)
-* extension[dispositionLocation].value[x] 1..1
-* extension[dispositionLocation].value[x] only Reference(DispositionLocation)
+* extension contains DispositionLocationReference named dispositionLocation 0..1
 * status 1..1
 * status only code
 * status = #final

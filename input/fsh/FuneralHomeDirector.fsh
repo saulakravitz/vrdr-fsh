@@ -16,10 +16,10 @@ Title: "VRDR Funeral Home Director"
 * ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
 * ^contact.telecom.use = #work
 * practitioner 1..1
-* practitioner only Reference($VRDR_Mortician)
+* practitioner only Reference(Mortician)
 * practitioner ^short = "practitioner"
 * organization 1..1
-* organization only Reference($VRDR_FuneralHome)
+* organization only Reference(FuneralHome)
 * organization ^short = "organization"
 * code 1..1
 * code from PractitionerRole (required)

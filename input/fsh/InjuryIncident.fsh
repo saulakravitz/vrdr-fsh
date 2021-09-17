@@ -8,14 +8,11 @@ Title: "VRDR Injury Incident"
 * ^experimental = false
 * ^date = "2020-05-10"
 * ^publisher = "Health Level Seven"
-* extension ..*
+* extension 0..*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "Observation.extension.url"
 * extension ^slicing.rules = #open
-* extension contains injuryLocation 0..1
-* extension[injuryLocation].url 1..1
-* extension[injuryLocation].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location" (exactly)
-* extension[injuryLocation].value[x] only Reference(InjuryLocation)
+* extension contains InjuryLocationReference named injuryLocation 0..1
 * status 1..1
 * status = #final (exactly)
 * code 1..1
