@@ -25,3 +25,6 @@ publisher:
   name: HL7 Public Health Working Group
   url: http://www.hl7.org/Special/committees/pher/index.cfm
   email: pher@lists.HL7.org
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
