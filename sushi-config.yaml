@@ -1,8 +1,9 @@
 canonical: http://hl7.org/fhir/us/vrdr
+releaseLabel: STU 2 (Post-Ballot, Pre-Publication Draft)
 fhirVersion: 4.0.1
 FSHOnly: false
 applyExtensionMetadataToRoot: false
-id: vrdr
+id: hl7.fhir.us.vrdr
 name: VRDR
 status: draft
 version: 1.2.0
