@@ -7,17 +7,15 @@ Description: """VRDR Cause of Death Pathway is an ordered list of cause of death
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2020-07-12T04:25:59.999+00:00"
 * ^meta.source = "#6uKjje9IIwW1M35K"
-* ^version = "1.0.0"
 * ^status = #draft
-* ^date = "2021-04-07T19:28:04+00:00"
-* ^publisher = "Health Level Seven International"
-* ^contact[0].name = "HL7 International - Public Health"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "http://www.hl7.org/Special/committees/pher"
-* ^contact[1].name = "Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"
-* ^contact[2].name = "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#US "United States of America"
-* ^jurisdiction[0].text = "US Realm"
+* ^publisher = "Hi3 Solutions"
+* ^contact.name = "AbdulMalik Shakir"
+* ^contact.telecom[0].system = #phone
+* ^contact.telecom[=].value = "6266444491"
+* ^contact.telecom[=].use = #work
+* ^contact.telecom[+].system = #email
+* ^contact.telecom[=].value = "abdulmalik.shakir@hi3solutions.com"
+* ^contact.telecom[=].use = #work
 * id 0..1
 * id ^short = "id"
 * id ^definition = "MAY contain zero or one [0..1] id (CONF:4393-317)."
@@ -40,13 +38,13 @@ Description: """VRDR Cause of Death Pathway is an ordered list of cause of death
 * orderedBy = $list-order#priority "Sorted by Priority" (exactly)
 * orderedBy ^short = "orderedBy"
 * orderedBy ^definition = "SHALL contain exactly one [1..1] orderedBy=\"\"priority\"\" (CONF:4393-322)."
-* entry 0..*
+* entry 1..*
 * entry ^short = "entry"
-* entry ^definition = "MAY contain zero or more [0..*] entry (CONF:4393-319)."
+* entry ^definition = "Shall contain zero or more [1..*] entry (CONF:4393-319)."
 * entry.item 1..1
 * entry.item only Reference(CauseOfDeathCondition)
 * entry.item ^short = "item"
-* entry.item ^definition = "The entry, if present, SHALL contain exactly one [1..1] item=\"VRDR Cause Of Death Condition\" (CONF:4393-320)."
+* entry.item ^definition = "Each entry SHALL contain exactly one [1..1] item=\"VRDR Cause Of Death Condition\" (CONF:4393-320)."
 
 Instance: 60401545-f1e1-4a80-867f-02384ffed857
 InstanceOf: VRDR_CauseOfDeathPathway
@@ -60,4 +58,4 @@ Usage: #example
 * mode = #snapshot
 * source.reference = "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
 * orderedBy = $list-order#priority "Sorted by Priority"
-* entry[0].item.reference = "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666"
+* entry.item.reference = "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666"

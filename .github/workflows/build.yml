@@ -21,17 +21,13 @@ jobs:
       - name: Set up ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: "2.6" 
-      - name: Install dependencies
-        run: npm install -g fsh-sushi --nosave
-      - name: Run fsh-sushi
-        run: sushi . ; ls -lR fsh-generated
+          ruby-version: "2.6"
       - name: Install jekyll
         run: gem install jekyll --no-document
       - name: Get Publisher Jar using curl
         run: mkdir input-cache; ls -l ;curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
-      - name: Run IG Publisher 
-        run: java -jar ./input-cache/publisher.jar publisher -no-sushi -ig .
+      - name: Run IG Publisher
+        run: java -jar ./input-cache/publisher.jar publisher -ig .
       - name: Push changes with keys
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
